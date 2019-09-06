@@ -3,8 +3,6 @@ package todo.json;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.Assert;
 import org.junit.Test;
-import todo.core.LatLong;
-import todo.core.LatLongs;
 
 public class LatLongsJsonTest {
 

@@ -12,8 +12,6 @@ import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.testfx.framework.junit.ApplicationTest;
-import todo.core.LatLong;
-import todo.core.LatLongs;
 
 import java.util.ArrayList;
 import java.util.List;
