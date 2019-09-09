@@ -21,7 +21,7 @@ public class FxAppController {
     }
 
     public void add(){
-      textOut.setText(todoIO.load());
+      textOut.setText();
     }
 
 
