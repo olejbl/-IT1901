@@ -21,7 +21,8 @@ public class FxAppController {
     }
 
     public void add(){
-      textOut.setText(textIn.getText());
+      liste.setWord(textIn.getText());
+      textOut.setText(liste.getWord());
     }
 
 
