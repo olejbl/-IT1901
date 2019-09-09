@@ -2,6 +2,7 @@ plugins {
     id 'java'
     id 'org.openjfx.javafxplugin' version '0.0.8'
     id 'application'
+    id 'jacoco'
 }
 
 group '19'
