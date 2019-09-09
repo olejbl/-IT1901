@@ -5,13 +5,7 @@ import org.junit.Test;
 
 public class ListeklasseTest {
 
-    private
 
-    @Before
-
-
-
-    @Test
 
 
 
