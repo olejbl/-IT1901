@@ -6,9 +6,9 @@ import java.io.IOException;
 
 public interface TodoInterface {
 
-    void save(String filname, Listeklasse liste) throws IOException;
+    void save(Listeklasse liste) throws IOException;
 
-    TodoObjectLoader load(String filename) throws IOException;
+    TodoObjectLoader load() throws IOException;
 
 
 }

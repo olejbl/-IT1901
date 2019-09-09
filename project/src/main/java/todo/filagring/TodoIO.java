@@ -9,9 +9,9 @@ import java.util.Scanner;
 
 public class TodoIO implements TodoInterface {
     @Override
-    public void save(String filename, Listeklasse liste) throws IOException {
-        PrintWriter writer = new PrintWriter(filename);
-        String s = (liste.getWord());
+    public void save(Listeklasse liste) throws IOException {
+        PrintWriter writer = new PrintWriter("../filagring/todo.txt");
+        String s = (liste.getWord() + ",");
         writer.print(s);
         writer.flush();
         writer.close();
@@ -19,9 +19,9 @@ public class TodoIO implements TodoInterface {
     }
 
     @Override
-    public TodoObjectLoader load(String filename) throws IOException {
-        Scanner scanner = new Scanner(new File(filename));
-        String liste = scanner.nextLine();
+    public TodoObjectLoader load() throws IOException {
+        Scanner scanner = new Scanner(new File("../filagring/todo.txt"));
+        String[] liste = scanner.nextLine().split(",");
         scanner.close();
         Listeklasse listeord = new Listeklasse();
 

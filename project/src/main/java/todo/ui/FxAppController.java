@@ -1,6 +1,7 @@
 package todo.ui;
 
 
+
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
@@ -20,7 +21,7 @@ public class FxAppController {
     }
 
     public void add(){
-      textOut.setText(textIn.getText());
+      textOut.setText(todoIO.load());
     }
 
 

@@ -2,7 +2,7 @@ package todo.core;
 
 public class Listeklasse {
 
-    private List
+    //private List<String> liste = new ArrayList<>();
 
     private String word;
 
