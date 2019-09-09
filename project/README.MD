@@ -38,6 +38,8 @@ Lagring
 
 Lagringsaget (persistenslaget) inneholder klasser for lagring av data. 
 
-
+Testing
+---
+Du kan teste appen ved å kjøre `gradle check`, og få ut testdekningsgrad ved hjelp av `gradle jacocoTestReport`, da vil rapporten ligge i `build/reports/jacoco/test/html/index.html`.
 
 ###### tags: `Readme` `Documentation` `IT1901`
