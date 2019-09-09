@@ -13,11 +13,13 @@
          <font>
             <Font name="Baskerville" size="12.0" />
          </font></TextField>
-      <TextArea fx:id="textOut" layoutX="352.0" layoutY="46.0" prefHeight="308.0" prefWidth="200.0" />
-      <TextField accessibleRole="TEXT_AREA" layoutX="129.0" layoutY="46.0" prefHeight="26.0" prefWidth="73.0" promptText="Todo List" text="Todo List">
+      <TextArea fx:id="textOut" disable="true" layoutX="352.0" layoutY="46.0" prefHeight="308.0" prefWidth="200.0" />
+      <TextField layoutX="129.0" layoutY="46.0" prefHeight="26.0" prefWidth="73.0" promptText="Todo List" text="Todo List">
          <font>
             <Font name="Baskerville" size="17.0" />
          </font>
       </TextField>
+      <Button layoutX="245.0" layoutY="174.0" mnemonicParsing="false" onAction="#save" text="Save" />
+      <Button layoutX="244.0" layoutY="219.0" mnemonicParsing="false" onAction="#load" text="Load" />
    </children>
 </AnchorPane>
