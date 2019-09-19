@@ -11,7 +11,7 @@ public class FxApp extends Application {
 
   @Override
   public void start(final Stage stage) throws Exception {
-    final FXMLLoader fxmlLoader = new FXMLLoader(FxApp.class.getResource("/FxApp.fxml"));
+    final FXMLLoader fxmlLoader = new FXMLLoader(FxApp.class.getResource("/fxui/src/main/resources/FxApp.fxml"));
     final Parent root = (Parent) fxmlLoader.load();
     final FxAppController controller = fxmlLoader.getController();
     controller.initialize();
