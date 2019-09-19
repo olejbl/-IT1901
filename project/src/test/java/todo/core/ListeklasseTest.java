@@ -10,8 +10,8 @@ public class ListeklasseTest {
 
      @Test
      public void wordTest() {
-         Assert.assertEquals(null, listeklasse.getWord());
-         listeklasse.setWord("git");
-         Assert.assertEquals("git", listeklasse.getWord());
+         Assert.assertEquals(true, listeklasse.getWordList().isEmpty());
+         listeklasse.wordListAdd("git");
+         Assert.assertEquals("git", listeklasse.getWordList().get(0));
      }
 }

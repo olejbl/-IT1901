@@ -1,21 +1,20 @@
 package todo.core;
 
+import java.util.ArrayList;
+
 public class Listeklasse {
+    private ArrayList<String> wordList = new ArrayList<String>();
 
-    //private List<String> liste = new ArrayList<>();
-
-    private String word;
-
-    public Listeklasse(){
-        setWord(word);
+    public void wordListAdd(String word) {
+        wordList.add(word);
     }
 
-    public String getWord(){
-        return word;
+    public void wordListRemove(String word) {
+        wordList.remove(word);
     }
 
-    public void setWord(String word){
-        this.word = word;
+    public ArrayList<String> getWordList() {
+        return wordList;
     }
 
 }
