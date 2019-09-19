@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
@@ -13,13 +14,15 @@
          <font>
             <Font name="Baskerville" size="12.0" />
          </font></TextField>
-      <TextArea fx:id="textOut" disable="true" layoutX="352.0" layoutY="46.0" prefHeight="308.0" prefWidth="200.0" />
-      <TextField layoutX="129.0" layoutY="46.0" prefHeight="26.0" prefWidth="73.0" promptText="Todo List" text="Todo List">
+      <TextField accessibleRole="TEXT_AREA" layoutX="129.0" layoutY="46.0" prefHeight="32.0" prefWidth="91.0" promptText="Todo List" text="Todo List">
          <font>
             <Font name="Baskerville" size="17.0" />
          </font>
       </TextField>
-      <Button layoutX="245.0" layoutY="174.0" mnemonicParsing="false" onAction="#save" text="Save" />
-      <Button layoutX="244.0" layoutY="219.0" mnemonicParsing="false" onAction="#load" text="Load" />
+      <ListView fx:id="listView" layoutX="356.0" layoutY="51.0" prefHeight="274.0" prefWidth="200.0" />
+      <Label fx:id="textOut" layoutX="95.0" layoutY="240.0" prefHeight="32.0" prefWidth="181.0" />
+      <Button layoutX="79.0" layoutY="187.0" mnemonicParsing="false" onAction="#save" text="Save" />
+      <Button layoutX="139.0" layoutY="187.0" mnemonicParsing="false" onAction="#load" text="Load" />
+      <Button layoutX="486.0" layoutY="19.0" mnemonicParsing="false" onAction="#clear" text="Clear All" />
    </children>
 </AnchorPane>
