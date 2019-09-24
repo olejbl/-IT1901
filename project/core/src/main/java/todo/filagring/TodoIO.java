@@ -5,7 +5,6 @@ import todo.core.Listeklasse;
 import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class TodoIO implements TodoInterface {
