@@ -1,26 +1,12 @@
-plugins {
-    id 'java'
-    id 'org.openjfx.javafxplugin' version '0.0.8'
-    id 'application'
-    id 'jacoco'
+allprojects {
+    repositories {
+        jcenter()
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+    }
 }
 
-group '19'
-version '1.0-SNAPSHOT'
-
-sourceCompatibility = 1.8
-
-repositories {
-    mavenCentral()
-}
-
-javafx{
-    version = '12'
-    modules = ['javafx.controls', 'javafx.fxml']
-}
-
-mainClassName = 'todo.ui.FxApp'
-
-dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.12'
+subprojects {
+    ext.depVersions = ['jackson': '2.9.8']
 }
