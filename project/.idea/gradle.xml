@@ -14,6 +14,11 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/core" />
             <option value="$PROJECT_DIR$/fxui" />
+<<<<<<< HEAD
+=======
+            <option value="$PROJECT_DIR$/restApi" />
+            <option value="$PROJECT_DIR$/restServer" />
+>>>>>>> 6edb35d573c921c3939558561816c5aa6707ceaa
           </set>
         </option>
         <option name="useAutoImport" value="true" />

@@ -10,4 +10,7 @@
 rootProject.name = '19'
 include 'core'
 include 'fxui'
+include 'restServer'
+findProject(':restServer')?.name = 'restserver'
+include 'restApi'
 
