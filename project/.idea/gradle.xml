@@ -1,29 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="GradleMigrationSettings" migrationVersion="1" />
-  <component name="GradleSettings">
-    <option name="linkedExternalProjectsSettings">
-      <GradleProjectSettings>
-        <option name="delegatedBuild" value="true" />
-        <option name="testRunner" value="GRADLE" />
-        <option name="distributionType" value="DEFAULT_WRAPPED" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="gradleHome" value="C:/Gradle/gradle-5.6.1" />
-        <option name="modules">
-          <set>
-            <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/core" />
-            <option value="$PROJECT_DIR$/fxui" />
-<<<<<<< HEAD
-=======
-            <option value="$PROJECT_DIR$/restApi" />
-            <option value="$PROJECT_DIR$/restServer" />
->>>>>>> 6edb35d573c921c3939558561816c5aa6707ceaa
-          </set>
-        </option>
-        <option name="useAutoImport" value="true" />
-        <option name="useQualifiedModuleNames" value="true" />
-      </GradleProjectSettings>
-    </option>
-  </component>
 </project>
