@@ -6,7 +6,7 @@ import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Scanner;
-
+/*
 public class TodoIO implements TodoInterface {
 
     @Override
@@ -21,7 +21,7 @@ public class TodoIO implements TodoInterface {
         writer.close();
 
     }
-
+    /*
     @Override
     public TodoObjectLoader load() throws IOException {
         Scanner scanner = new Scanner(new File("src/main/java/todo/filagring/todo.txt"));
@@ -36,4 +36,5 @@ public class TodoIO implements TodoInterface {
         loader.liste = listeord;
         return loader;
     }
-}
+
+*/
