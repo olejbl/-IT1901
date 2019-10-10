@@ -4,17 +4,17 @@
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
-        <option name="delegatedBuild" value="true" />
-        <option name="testRunner" value="GRADLE" />
         <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="gradleHome" value="C:/Gradle/gradle-5.6.1" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/core" />
+            <option value="$PROJECT_DIR$/fxui" />
+            <option value="$PROJECT_DIR$/restApi" />
+            <option value="$PROJECT_DIR$/restServer" />
           </set>
         </option>
-        <option name="useAutoImport" value="true" />
         <option name="useQualifiedModuleNames" value="true" />
       </GradleProjectSettings>
     </option>

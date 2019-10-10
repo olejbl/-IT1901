@@ -1,0 +1,8 @@
+public class TodoConfig extends ResourceConfig{
+
+    public TodoConfig(){
+        this(new Listeklasse)
+    }
+
+
+}
