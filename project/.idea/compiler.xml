@@ -4,5 +4,13 @@
     <annotationProcessing>
       <profile default="true" name="Default" enabled="true" />
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="19.core.main" target="1.10" />
+      <module name="19.core.test" target="1.10" />
+      <module name="19.fxui.main" target="1.10" />
+      <module name="19.fxui.test" target="1.10" />
+      <module name="19.restServer.main" target="1.8" />
+      <module name="19.restServer.test" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
