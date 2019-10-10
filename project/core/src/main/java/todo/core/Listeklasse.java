@@ -1,20 +1,12 @@
 package todo.core;
 
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonGetter;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.ObjectReader;
-
-import java.io.File;
-import java.io.IOException;
 import java.util.ArrayList;
 //testfx
 //mocking
 
 public class Listeklasse {
 
-    private ArrayList<Todo> wordList = new ArrayList<>();
+    public static ArrayList<Todo> wordList = new ArrayList<>();
     private Todo todo;
 
     /*
