@@ -7,6 +7,10 @@
       <module name="19.fxui.main" target="1.10" />
       <module name="19.fxui.test" target="1.10" />
       <module name="19.main" target="1.8" />
+      <module name="19.restApi.main" target="11" />
+      <module name="19.restApi.test" target="11" />
+      <module name="19.restserver.main" target="1.8" />
+      <module name="19.restserver.test" target="1.8" />
       <module name="19.test" target="1.8" />
     </bytecodeTargetLevel>
   </component>
