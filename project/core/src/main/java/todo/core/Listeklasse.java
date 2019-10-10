@@ -9,43 +9,50 @@ import com.fasterxml.jackson.databind.ObjectReader;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+//testfx
+//mocking
 
 public class Listeklasse {
 
-    private ArrayList<String> wordList = new ArrayList<String>();
+    private ArrayList<Todo> wordList = new ArrayList<Todo>();
+    private Todo todo;
+
+    /*
     private boolean done;
     private String desc;
-
     @JsonCreator
     public Listeklasse(@JsonProperty("description") String desc, @JsonProperty("done") boolean done) {
         this.setDescription(desc);
         this.setDone(done);
     }
-
     private void setDone(boolean done) {
         this.done = done;
     }
 
     private void setDescription(String desc) {
         this.desc = desc;
+    }*/
+
+    @JsonCreator
+    public Listeklasse(@JsonProperty()ArrayList<Todo> wordList1){
+        this.wordList = wordList;
     }
-
-
-    public Listeklasse(ArrayList<String> wordList) throws IOException {
+/*  //-------Kan slettes hvis Serializer og Deserializer klassene fungerer
+    public Listeklasse(ArrayList<Todo> wordList) throws IOException {
         this.wordList = wordList;
         new ObjectMapper().writeValue(new File("/build/"), new Listeklasse(wordList));
-        Listeklasse lest_liste = new ObjectMapper().readValue(new File("/build/todo1.json"), Listeklasse.class);
+        Listeklasse lestListe = new ObjectMapper().readValue(new File("/build/todo1.json"), Listeklasse.class);
+    }
+*/
+    public void wordListAdd(Todo todo) {
+        wordList.add(todo);
     }
 
-    public void wordListAdd(String word) {
-        wordList.add(word);
+    public void wordListRemove(Todo todo) {
+        wordList.remove(todo);
     }
 
-    public void wordListRemove(String word) {
-        wordList.remove(word);
-    }
-
-    public ArrayList<String> getWordList() {
+    public ArrayList<Todo> getWordList() {
         return wordList;
     }
 

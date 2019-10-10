@@ -11,7 +11,7 @@ import java.lang.reflect.InvocationTargetException;
 import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.databind.JsonSerializer;
 import com.fasterxml.jackson.databind.SerializerProvider;
-
+/*
 public class ListeklasseSerializer extends JsonSerializer<Listeklasse>{
 
     //saver til fil
@@ -23,7 +23,7 @@ public class ListeklasseSerializer extends JsonSerializer<Listeklasse>{
             o.close();
         }/* catch (InvocationTargetException e) {
             throw e.getCause();
-        }*/catch (IOException e) {
+        }catch (IOException e) {
             System.out.println(System.getProperty("user.dir"));
             e.printStackTrace();
         }
@@ -40,3 +40,5 @@ public class ListeklasseSerializer extends JsonSerializer<Listeklasse>{
         gen.writeEndArray();
     }
 }
+
+ */

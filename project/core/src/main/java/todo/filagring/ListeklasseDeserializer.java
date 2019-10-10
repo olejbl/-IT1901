@@ -17,7 +17,11 @@ import java.util.ArrayList;
 import com.fasterxml.jackson.databind.node.ArrayNode;
 
 public class ListeklasseDeserializer extends JsonDeserializer<Listeklasse> {
-
+    @Override
+    public Listeklasse deserialize(JsonParser p, DeserializationContext ctxt) throws IOException, JsonProcessingException {
+        return null;
+    }
+/*
     //Loader fra fil
     public void loadFromFile() throws Throwable {
         String filename = "todo.txt";
@@ -26,7 +30,7 @@ public class ListeklasseDeserializer extends JsonDeserializer<Listeklasse> {
             Listeklasse listeklasse = (Listeklasse) o.readObject();
         }/* catch (InvocationTargetException e) {
             throw e.getCause();
-        }*/catch (IOException e) {
+        }catch (IOException e) {
             e.printStackTrace();
         }
         System.out.println("done writing");
@@ -49,4 +53,5 @@ public class ListeklasseDeserializer extends JsonDeserializer<Listeklasse> {
 
 
     }
+    */
 }
