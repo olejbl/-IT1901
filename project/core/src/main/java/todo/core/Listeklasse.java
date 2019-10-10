@@ -14,7 +14,7 @@ import java.util.ArrayList;
 
 public class Listeklasse {
 
-    private ArrayList<Todo> wordList = new ArrayList<Todo>();
+    private ArrayList<Todo> wordList = new ArrayList<>();
     private Todo todo;
 
     /*
@@ -32,8 +32,10 @@ public class Listeklasse {
     private void setDescription(String desc) {
         this.desc = desc;
     }*/
-
-    @JsonCreator
+    public Listeklasse(ArrayList<Todo> wordList){
+        this.wordList = wordList;
+    }
+    /*@JsonCreator
     public Listeklasse(@JsonProperty()ArrayList<Todo> wordList1){
         this.wordList = wordList;
     }
