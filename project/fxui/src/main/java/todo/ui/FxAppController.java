@@ -10,6 +10,7 @@ import todo.core.Listeklasse;
 //import todo.filagring.TodoIO;
 import todo.core.Todo;
 //import todo.filagring.ListeklasseSerializer;
+import todo.filagring.Serializer;
 import todo.filagring.TodoInterface;
 import todo.filagring.TodoObjectLoader;
 
@@ -29,6 +30,10 @@ public class FxAppController {
     private ArrayList<Todo> arraylist = new ArrayList<>();
     private ArrayList<String> todoList = new ArrayList<>();
     private Todo todo;
+    private Serializer serializer;
+
+
+
 
   @FXML
     public void initialize(){
@@ -44,10 +49,14 @@ public class FxAppController {
         listView.getItems().add(String.valueOf(new Todo(textIn.getText(),true)));
     }
 
-    public void save() throws Throwable {
+    public void save()  {
+      Serializer serializer1 = new Serializer();
+        System.out.println("kjør");
          try {
-             io.save(listeklasse);
+             //io.save(listeklasse);
              //listeklasseSerializerserializer.saveToFile(liste);
+             System.out.println("heihei");
+             serializer1.doSerializing(listeklasse);
 
          }catch (IOException e){
              textOut.setText("Noe gikk galt med lagring");

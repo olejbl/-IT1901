@@ -9,6 +9,7 @@ import java.io.IOException;
 public class Deserializer {
 
     public Deserializer() throws IOException {
+        System.out.println("test");
         Listeklasse listeklasse = new ObjectMapper().readValue(new File("/build/todo1.json"), Listeklasse.class);
     }
 }
