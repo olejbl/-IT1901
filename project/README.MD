@@ -13,22 +13,14 @@ README.MD
 ## Organisering av koden
 Dette prosjektet tar for seg bygging av en TODO-liste. Det er en trelagsapplikasjon med domenelag, UI og lagring. Gradle blir brukt som byggesystem.
 
-<<<<<<< HEAD
+
 For core:
 
 
 * `src/main/java` for koden til kjernelogikken
 
 * `scr/main/resources` for tilhørende ressurser, f.eks. data-filer og FXML-filer, som brukes av applikasjonen.
-=======
-* src.src.main.src/src.src.main.src.src.src.main.src.src.main/java for koden til applikasjonen
 
-* src.src.main.src/src.src.main.src.src.src.main.src.src.main/src.main.resources for tilhørende ressurser, f.eks. data-filer og FXML-filer, som brukes av applikasjonen.
-
-* src.src.main.src/src.src.test/java for testkoden
-
-* src.src.main.src/src.src.test/src.main.resources for tilhørende ressurser, f.eks. data-filer og FXML-filer, som brukes av testene.
->>>>>>> 28932cb2e38e3a592ea9bf69883fe3bb4cda1c91
 
 * `scr/test/java` for testkoden
 
