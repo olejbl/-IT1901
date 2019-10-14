@@ -10,14 +10,9 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
-
-import org.springframework.http.HttpEntity;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.RestTemplate;
 import todo.core.Listeklasse;
 import todo.core.Todo;
-import todo.filagring.TodoInterface;
-
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -29,7 +24,6 @@ public class FxAppController {
   @FXML private Label textOut;
   @FXML private Button btn;
   @FXML private ListView<String> listView;
-    private TodoInterface io;
     private Listeklasse listeklasse;
     private ArrayList<Todo> arraylist = new ArrayList<>();
     private ArrayList<String> todoList = new ArrayList<>();
@@ -49,7 +43,10 @@ public class FxAppController {
       listeklasse = new Listeklasse(arraylist);
     }
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> df50ddb948bebdc4303ac5b557239b3b9836bfce
     public void add() throws IOException {
       ObservableList<String> items = FXCollections.observableArrayList(listeklasse.getWordList().toString());
       listView.getItems().add(String.valueOf(new Todo(textIn.getText(),true)));
