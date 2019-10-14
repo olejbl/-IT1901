@@ -13,14 +13,25 @@ README.MD
 ## Organisering av koden
 Dette prosjektet tar for seg bygging av en TODO-liste. Det er en trelagsapplikasjon med domenelag, UI og lagring. Gradle blir brukt som byggesystem.
 
+For core:
+
+
 * src/main/java for koden til applikasjonen
 
-* src/main/resources for tilhørende ressurser, f.eks. data-filer og FXML-filer, som brukes av applikasjonen.
+* scr/main/resources for tilhørende ressurser, f.eks. data-filer og FXML-filer, som brukes av applikasjonen.
 
-* src/test/java for testkoden
+* scr/test/java for testkoden
 
-* src/test/resources for tilhørende ressurser, f.eks. data-filer og FXML-filer, som brukes av testene.
+* scr/test/resources for tilhørende ressurser, f.eks. data-filer og FXML-filer, som brukes av testene.
 
+For fxui:
+
+* src/main/java/todoui for kontrollerklasse og applikasjonsklasse
+* src/main/resources for fxml-fil
+
+for restapi:
+*
+*
 
 Domenelaget
 ---
@@ -31,12 +42,12 @@ Brukergrensesnitt
 
 Brukergrensesnittlaget inneholder alle klassene som tar for seg user-interface, og hvordan de representes gjennom visningen av data i applikasjonen.
 
-Brukergrensesnittet er laget med JavaFX og FXML. Det finner man i src⁩/⁨main⁩/⁨java⁩/⁨todo/ui⁩
+Brukergrensesnittet er laget med JavaFX og FXML. Det finner man i `fxui/src/main/java/todoui` for kontroller og app-klassen. FXML-fila finnes i `fxui/src/resources`
 
 Lagring
 ---
 
-Lagringsaget (persistenslaget) inneholder klasser for lagring av data. 
+Lagringsaget (persistenslaget) inneholder klasser for lagring av data. Det foregår i modulene restApi og restserver
 
 Testing
 ---

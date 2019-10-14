@@ -14,3 +14,4 @@ public class ListeklasseTest {
          Assert.assertEquals("git", listeklasse.getWordList().get(0));
      }
 }
+o
