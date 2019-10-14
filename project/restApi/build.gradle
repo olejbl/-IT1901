@@ -3,6 +3,7 @@ plugins {
 	id 'org.springframework.boot' version '2.1.8.RELEASE'
 	id 'io.spring.dependency-management' version '1.0.8.RELEASE'
 	id 'java'
+
 }
 
 group = 'gr1919'
@@ -28,7 +29,9 @@ dependencies {
 	testImplementation 'org.springframework.boot:spring-boot-starter-src.src.test'
     compile(
             'org.springframework.boot:spring-boot-starter-actuator',
-            'org.springframework.boot:spring-boot-starter-thymeleaf'
+            'org.springframework.boot:spring-boot-starter-thymeleaf',
+			'org.springframework.boot:spring-boot-starter-web',
+			'org.json:json:20171018'
     )
     testCompile('org.springframework.boot:spring-boot-starter-src.src.test')
 	implementation project(':core')
