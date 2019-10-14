@@ -11,6 +11,9 @@ Inneholder klassene `ApiController.java` og `ProjectApplication.java` .
 Vi bruker springboot til å lage rest-api og server. 
 Oppretter lokal server med localhost
 
+## Lagring
+Vi har flytta lagring, persistenslaget, over til rest-api-modulen. 
+
 ## Bygging med gradle 
-Som de andre modulene bygges også rest-api-et med gradle. 
+Som de andre modulene bygges også rest-api-et med gradle. Her skjer serialisering og deserialisering
 

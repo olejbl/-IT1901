@@ -16,7 +16,7 @@ Dette prosjektet tar for seg bygging av en TODO-liste. Det er en trelagsapplikas
 For core:
 
 
-* `src/main/java` for koden til applikasjonen
+* `src/main/java` for koden til kjernelogikken
 
 * `scr/main/resources` for tilhørende ressurser, f.eks. data-filer og FXML-filer, som brukes av applikasjonen.
 

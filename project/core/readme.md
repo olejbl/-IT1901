@@ -16,9 +16,8 @@ Domenelaget testes ved klassen `Listeklassetest.java` og ligger i `core/src/test
 For å teste bruker vi jUnit, og for å vise testdekningsgrad bruker vi jacoco. Man får ut testdekningsgrad ved hjelp av `gradle jacocoTestReport`, da vil rapporten ligge i `build/reports/jacoco/test/html/index.html`.
 
 ## Persistenslaget 
-Persistenslaget handler om fillagring. Her leses og skrives av dataene i domenellaget. Vi bruker JSON til dette.
+Persistenslaget handler om fillagring. Her leses og skrives av dataene i domenellaget. Vi bruker JSON til dette. Vi har flyttet lagring til rest-api-modulen der serialisering og deserialisering gjøres i kontrollerklassen.
 
-Persistenslaget finnes i `core/src/main/todo/filagring` 
 
 #### Test
 Persistenslaget testes ved klassen `TestTodoIO.java` og ligger i `core/src/test/todo/filagring`
