@@ -40,12 +40,14 @@ public class FxAppController {
 
 
 
-
+    //initialiserer en ny instans av Listeklasse
   @FXML
     public void initialize(){
       listeklasse = new Listeklasse(arraylist);
       //io = new TodoIO();
     }
+
+    //gjør at knappen add legger til det du har skrevet inn i lista (listView) i Scenebuilder
     public void add(){
         //listeklasse.wordListAdd(listeklasse.);
         ObservableList<String> items = FXCollections.observableArrayList(listeklasse.getWordList().toString());
@@ -54,6 +56,7 @@ public class FxAppController {
         listView.getItems().add(String.valueOf(new Todo(textIn.getText(),true)));
     }
 
+    //funksjon som skal lagre det som skrives inn
     @FXML
     public void save() throws Throwable {
          try {
@@ -70,6 +73,7 @@ public class FxAppController {
 
     }
 
+    //funskjon som skal laste inn det som ble lagret ved save()-lfunskjonen
     @FXML
     public void load() {
         ResponseEntity<Listeklasse> listeklasse1 = new RestTemplate().getForEntity("http://localhost:8080/hei/",// + 0,
@@ -89,12 +93,13 @@ public class FxAppController {
         }*/
     }
 
-
+    // tømmer hele lista
     public void clear() {
       listeklasse = new Listeklasse(arraylist);
       listView.getItems().clear();
     }
 
+    //getter
     public Listeklasse getListeklasse(){
       return listeklasse;
     }
