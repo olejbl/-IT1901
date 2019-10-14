@@ -1,4 +1,4 @@
-package todo.ui;
+package src.main.java.todo.ui;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -9,6 +9,7 @@ import javafx.stage.Stage;
 
 public class FxApp extends Application {
 
+  //funskjon som starter FxApp.fxml
   @Override
   public void start(final Stage stage) throws Exception {
     final FXMLLoader fxmlLoader = new FXMLLoader(FxApp.class.getResource("FxApp.fxml"));

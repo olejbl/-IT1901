@@ -10,7 +10,7 @@ plugins {
     // java library
     id 'java-library'
     
-	// test coverage
+	// src.src.test coverage
     id 'jacoco'
 
    	// code quality with SpotBugs
@@ -44,6 +44,6 @@ dependencies {
 	// api means that those consuming our library 'inherits' this as a compile dependency
     api "com.fasterxml.jackson.core:jackson-databind:${depVersions.jackson}"
 
-    // Use JUnit test framework
+    // Use JUnit src.src.test framework
     testImplementation 'junit:junit:4.12'
 }
