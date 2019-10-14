@@ -20,3 +20,4 @@ public class ListeklasseTest {
          Assert.assertEquals(true, listeklasse.getWordList().isEmpty());
      }
 }
+o
