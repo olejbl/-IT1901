@@ -8,9 +8,9 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
+
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.RestTemplate;
-
 import todo.core.Listeklasse;
 import todo.core.Todo;
 import todo.filagring.TodoInterface;
