@@ -8,6 +8,7 @@ public class Listeklasse {
 
     public static ArrayList<Todo> wordList = new ArrayList<>();
     private Todo todo;
+    private String name;
 
     /*
     private boolean done;
@@ -26,6 +27,10 @@ public class Listeklasse {
     }*/
     public Listeklasse(ArrayList<Todo> wordList){
         this.wordList = wordList;
+    }
+
+    public Listeklasse() {
+
     }
     /*@JsonCreator
     public Listeklasse(@JsonProperty()ArrayList<Todo> wordList1){
@@ -50,4 +55,7 @@ public class Listeklasse {
         return wordList;
     }
 
+    public String getName() {
+        return name;
+    }
 }

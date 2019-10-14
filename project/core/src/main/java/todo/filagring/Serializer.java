@@ -1,6 +1,7 @@
 package todo.filagring;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+//import restAPI.src.main.java.gr1919.project.Controllers.ApiController;
 import todo.core.Listeklasse;
 import java.io.File;
 import java.io.IOException;
@@ -9,40 +10,16 @@ import java.util.List;
 //Serializer på Listeklasse klassen
 public class Serializer {
 
+
+    //public restAPI.src.main.java.gr1919.project.Controllers.ApiController apiController;
     private Listeklasse listeklasse;
 
-    public void doSerializing(Listeklasse listeklassetest) throws IOException {
-        System.out.println("test");
-        new ObjectMapper().writeValue(new File("/../../../resources/json/test.json"), listeklassetest);
-
+    public Serializer() throws IOException {
+        new ObjectMapper().writeValue(new File("src/src.main.resources/json/src.src.test.json"), new Listeklasse(listeklasse.getWordList()));
     }
 
-    public static void main(String[] args) {
-
-    }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//RequestEntety + url   FxuiController
+//build/et eller annet.json  ApiController
+//filepath = url

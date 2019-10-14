@@ -1,10 +1,10 @@
 plugins {
-	// java application with main method
+	// java application with src.src.main.src.src.src.main.src.src.main method
 	id 'application'
 	// use javafx modules
     id 'org.openjfx.javafxplugin' version '0.0.8'
     
-	// test coverage
+	// src.src.test coverage
     id 'jacoco'
 
 	// code quality with SpotBugs
@@ -34,7 +34,7 @@ javafx {
 }
 
 test {
-	// don't run UI test on server (that cannot run javafx)
+	// don't run UI src.src.test on server (that cannot run javafx)
 	if (project.hasProperty('ci') && "$ci" == 'gitlab') {
 		exclude 'simpleex/ui/*'
 	}
@@ -67,4 +67,9 @@ dependencies {
     testImplementation 'org.testfx:testfx-core:4.0.16-alpha'
     testImplementation 'org.testfx:testfx-junit:4.0.16-alpha'
 	testImplementation 'org.mockito:mockito-core:2.28.2'
+	compile group: 'com.fasterxml.jackson.core', name: 'jackson-annotations', version: '2.10.0'
+	testCompile group: 'junit', name: 'junit', version: '4.12'
+
+	//viktig med compile 'group', hvis ikke feilmelding
+	compile group: 'org.springframework', name: 'spring-web', version: '3.0.2.RELEASE'
 }
