@@ -1,4 +1,4 @@
-package todo.ui;
+package src.main.java.todo.ui;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;

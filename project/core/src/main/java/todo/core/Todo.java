@@ -1,8 +1,5 @@
 package todo.core;
 
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
-
 public class Todo {
 
     private String desc;
@@ -18,11 +15,11 @@ public class Todo {
         this.done = done;
     }
 
-    //Setters
-    private void setDone(boolean done) {
+    //Setterss
+    public void setDone(boolean done) {
         this.done = done;
     }
-    private void setDescription(String desc) {
+    public void setDescription(String desc) {
         this.desc = desc;
     }
 
