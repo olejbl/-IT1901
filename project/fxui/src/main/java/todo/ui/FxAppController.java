@@ -1,7 +1,6 @@
 package todo.ui;
 
 
-
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -9,16 +8,18 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.client.RestTemplate;
+
 import todo.core.Listeklasse;
-//import todo.filagring.TodoIO;
 import todo.core.Todo;
-//import todo.filagring.ListeklasseSerializer;
 import todo.filagring.TodoInterface;
-import todo.filagring.TodoObjectLoader;
 
 import java.io.IOException;
-import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
+
+//import todo.filagring.TodoIO;
+//import todo.filagring.ListeklasseSerializer;
 
 
 
@@ -50,6 +51,7 @@ public class FxAppController {
         listView.getItems().add(String.valueOf(new Todo(textIn.getText(),true)));
     }
 
+    @FXML
     public void save() throws Throwable {
          try {
              io.save(listeklasse);
@@ -63,8 +65,13 @@ public class FxAppController {
 
     }
 
+    @FXML
     public void load() {
-        try {
+        ResponseEntity<Listeklasse> listeklasse1 = new RestTemplate().getForEntity("http://localhost:8080/hei/",// + 0,
+                Listeklasse.class);//.getBody();
+        //System.out.println(listeklasse1.getName());
+
+        /*try {
             TodoObjectLoader loader = io.load();
             listeklasse = loader.liste;
             for(Todo word : listeklasse.getWordList()) {
@@ -74,8 +81,9 @@ public class FxAppController {
 
         } catch (Exception e) {
             textOut.setText("Det gikk galt med loading");
-        }
+        }*/
     }
+
 
     public void clear() {
       listeklasse = new Listeklasse(arraylist);
