@@ -5,6 +5,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import todo.core.Listeklasse;
 import java.io.File;
 import java.io.IOException;
+import java.util.List;
 
 //Serializer på Listeklasse klassen
 public class Serializer {
