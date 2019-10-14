@@ -10,6 +10,8 @@ modul for brukergrensesnitt
 I dette lager ligger alt som har med det vi kan se, altså frontend. 
 Vi bruker JavaFX og Scenebuilder til å lage utseende på applikasjonen vår. 
 
+Meningen er å koble `RestClient.java`opp mot `FxAppController.java`slik at man kan bruke metoder som GET og POST i kontrollerklassen for å kommunsiere med server. 
+
 Oppsettet er som følger:
 
 * `src/main/java/todoui/FxApp` er 
