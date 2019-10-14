@@ -14,7 +14,7 @@ public class ApiController {
         return "welcome";
     }
 
-    @GetMapping("/test")
+    @GetMapping("/src/src.test")
     public ArrayList<Todo> getWordList() {
         return todo.core.Listeklasse.wordList;
     }

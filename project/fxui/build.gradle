@@ -1,10 +1,10 @@
 plugins {
-	// java application with main method
+	// java application with src.src.main.src.src.src.main.src.src.main method
 	id 'application'
 	// use javafx modules
     id 'org.openjfx.javafxplugin' version '0.0.8'
     
-	// test coverage
+	// src.src.test coverage
     id 'jacoco'
 
 	// code quality with SpotBugs
@@ -34,7 +34,7 @@ javafx {
 }
 
 test {
-	// don't run UI test on server (that cannot run javafx)
+	// don't run UI src.src.test on server (that cannot run javafx)
 	if (project.hasProperty('ci') && "$ci" == 'gitlab') {
 		exclude 'simpleex/ui/*'
 	}

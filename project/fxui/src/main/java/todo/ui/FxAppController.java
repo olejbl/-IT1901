@@ -1,4 +1,4 @@
-package todo.ui;
+package src.main.java.todo.ui;
 
 
 
@@ -17,7 +17,6 @@ import todo.filagring.TodoInterface;
 import todo.filagring.TodoObjectLoader;
 
 import java.io.IOException;
-import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 
 
@@ -41,7 +40,6 @@ public class FxAppController {
       listeklasse = new Listeklasse(arraylist);
       //io = new TodoIO();
     }
-
     public void add(){
         //listeklasse.wordListAdd(listeklasse.);
         ObservableList<String> items = FXCollections.observableArrayList(listeklasse.getWordList().toString());
@@ -80,5 +78,9 @@ public class FxAppController {
     public void clear() {
       listeklasse = new Listeklasse(arraylist);
       listView.getItems().clear();
+    }
+
+    public Listeklasse getListeklasse(){
+      return listeklasse;
     }
 }

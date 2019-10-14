@@ -27,6 +27,10 @@ public class Listeklasse {
     public Listeklasse(ArrayList<Todo> wordList){
         this.wordList = wordList;
     }
+
+    public Listeklasse() {
+
+    }
     /*@JsonCreator
     public Listeklasse(@JsonProperty()ArrayList<Todo> wordList1){
         this.wordList = wordList;

@@ -13,13 +13,13 @@ README.MD
 ## Organisering av koden
 Dette prosjektet tar for seg bygging av en TODO-liste. Det er en trelagsapplikasjon med domenelag, UI og lagring. Gradle blir brukt som byggesystem.
 
-* src/main/java for koden til applikasjonen
+* src.src.main.src/src.src.main.src.src.src.main.src.src.main/java for koden til applikasjonen
 
-* src/main/resources for tilhørende ressurser, f.eks. data-filer og FXML-filer, som brukes av applikasjonen.
+* src.src.main.src/src.src.main.src.src.src.main.src.src.main/src.main.resources for tilhørende ressurser, f.eks. data-filer og FXML-filer, som brukes av applikasjonen.
 
-* src/test/java for testkoden
+* src.src.main.src/src.src.test/java for testkoden
 
-* src/test/resources for tilhørende ressurser, f.eks. data-filer og FXML-filer, som brukes av testene.
+* src.src.main.src/src.src.test/src.main.resources for tilhørende ressurser, f.eks. data-filer og FXML-filer, som brukes av testene.
 
 
 Domenelaget
@@ -40,6 +40,6 @@ Lagringsaget (persistenslaget) inneholder klasser for lagring av data.
 
 Testing
 ---
-Du kan teste appen ved å kjøre `gradle check`, og få ut testdekningsgrad ved hjelp av `gradle jacocoTestReport`, da vil rapporten ligge i `build/reports/jacoco/test/html/index.html`.
+Du kan teste appen ved å kjøre `gradle check`, og få ut testdekningsgrad ved hjelp av `gradle jacocoTestReport`, da vil rapporten ligge i `build/reports/jacoco/src.src.test/html/index.html`.
 
 ###### tags: `Readme` `Documentation` `IT1901`
