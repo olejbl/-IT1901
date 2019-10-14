@@ -5,49 +5,79 @@ package todo.ui;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
-import javafx.scene.control.*;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.ListView;
+import javafx.scene.control.TextField;
 import todo.core.Listeklasse;
-import todo.filagring.TodoIO;
+//import todo.filagring.TodoIO;
+import todo.core.Todo;
+//import todo.filagring.ListeklasseSerializer;
+import todo.filagring.Serializer;
 import todo.filagring.TodoInterface;
 import todo.filagring.TodoObjectLoader;
 
 import java.io.IOException;
+import java.lang.reflect.InvocationTargetException;
+import java.util.ArrayList;
+
+
 
 
 public class FxAppController {
+
   @FXML private TextField textIn;
   @FXML private Label textOut;
   @FXML private Button btn;
   @FXML private ListView<String> listView;
     private TodoInterface io;
-    private Listeklasse liste;
+    private Listeklasse listeklasse;
+    //private ListeklasseSerializer listeklasseSerializerserializer;
+    private ArrayList<Todo> arraylist = new ArrayList<>();
+    private ArrayList<String> todoList = new ArrayList<>();
+    private Todo todo;
+    private Serializer serializer;
+
+
+
 
   @FXML
     public void initialize(){
-      liste = new Listeklasse();
-      io = new TodoIO();
+      listeklasse = new Listeklasse(arraylist);
+      //io = new TodoIO();
     }
 
     public void add(){
-        liste.wordListAdd(textIn.getText());
-        ObservableList<String> items = FXCollections.observableArrayList(liste.getWordList());
-        listView.setItems(items);
+        //listeklasse.wordListAdd(listeklasse.);
+        ObservableList<String> items = FXCollections.observableArrayList(listeklasse.getWordList().toString());
+        //listView.setItems(items);
+
+        listView.getItems().add(String.valueOf(new Todo(textIn.getText(),true)));
     }
 
-    public void save(){
-        try {
-            io.save(liste);
-        } catch (IOException e){
-            textOut.setText("Noe gikk galt med lagring");
-        }
+    public void save()  {
+      Serializer serializer1 = new Serializer();
+        System.out.println("kjør");
+         try {
+             //io.save(listeklasse);
+             //listeklasseSerializerserializer.saveToFile(liste);
+             System.out.println("heihei");
+             serializer1.doSerializing(listeklasse);
+
+         }catch (IOException e){
+             textOut.setText("Noe gikk galt med lagring");
+             e.printStackTrace();
+         }
+
+
     }
 
     public void load() {
         try {
             TodoObjectLoader loader = io.load();
-            liste = loader.liste;
-            for(String word : liste.getWordList()) {
-                listView.getItems().add(word);
+            listeklasse = loader.liste;
+            for(Todo word : listeklasse.getWordList()) {
+                //listView.getItems().add(word);
             }
             //listView.getItems().add(liste.getWordList().toString());
 
@@ -57,7 +87,7 @@ public class FxAppController {
     }
 
     public void clear() {
-      liste = new Listeklasse();
+      listeklasse = new Listeklasse(arraylist);
       listView.getItems().clear();
     }
 }
