@@ -8,7 +8,7 @@ modul for REST-api
 ## REST-api
 Inneholder klassene `ApiController.java` og `ProjectApplication.java` . 
 
-Vi bruker springboot til å lage rest-api og server. Det gjør at vi ikke trenger å lage
+Vi bruker springboot til å lage rest-api og server. Det gjør at vi ikke trenger å lage egne klasser for serialisering og deserialisering i persisitenslaget. 
 Oppretter lokal server med localhost
 
 ## Lagring
