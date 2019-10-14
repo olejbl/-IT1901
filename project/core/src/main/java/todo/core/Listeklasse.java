@@ -8,6 +8,7 @@ public class Listeklasse {
 
     public static ArrayList<Todo> wordList = new ArrayList<>();
     private Todo todo;
+    private String name;
 
     /*
     private boolean done;
@@ -54,4 +55,7 @@ public class Listeklasse {
         return wordList;
     }
 
+    public String getName() {
+        return name;
+    }
 }
