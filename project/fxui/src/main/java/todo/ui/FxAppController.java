@@ -36,7 +36,6 @@ public class FxAppController {
     private ArrayList<Todo> arraylist = new ArrayList<>();
     private ArrayList<String> todoList = new ArrayList<>();
     private Todo todo;
-    private Serializer serializer;
 
 
 
@@ -60,10 +59,10 @@ public class FxAppController {
     @FXML
     public void save() throws Throwable {
          try {
-             //io.save(listeklasse);
+             io.save(listeklasse);
              //listeklasseSerializerserializer.saveToFile(liste);
              System.out.println("heihei");
-             serializer1.doSerializing(listeklasse);
+             //serializer1.doSerializing(listeklasse);
 
          }catch (IOException e){
              textOut.setText("Noe gikk galt med lagring");
