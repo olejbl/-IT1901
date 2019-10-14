@@ -1,20 +1,18 @@
 @startuml
 
+
 component core{
     package todo.core
     package todo.json
-
 }
 
 component fxui{
     package todo.ui
-
 }
 
 component javafx{
     component fxml{
     }
-
 }
 
 fxui ..> javafx
@@ -27,11 +25,10 @@ component restApi{
 todo.restApi ..> todo.core
 todo.restApi ..> todo.json
 
-component restserver{
+component restserver {
     package todo.restserver
 }
 component springboot {
-
 }
 
 todo.restserver ..> todo.restApi
