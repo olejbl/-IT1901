@@ -16,10 +16,10 @@ public class Todo {
     }
 
     //Setterss
-    private void setDone(boolean done) {
+    public void setDone(boolean done) {
         this.done = done;
     }
-    private void setDescription(String desc) {
+    public void setDescription(String desc) {
         this.desc = desc;
     }
 
