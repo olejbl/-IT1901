@@ -16,6 +16,9 @@ Oppsettet er som følger:
 * `src/main/java/todoui/FxAppController` er kontrollerklassen
 * `src/main/resources/todoui/FxAppfxml` er fxml-filen som gjenspeiler hvordan vi vi lagde appen i scenebuilder  
 
+#### Test 
+Brukergrensesnittet testes ved `FxAppControllerTest.java`  som ligger under `src/test/java/todo/ui`. 
+For å teste bruker vi **jUnit**. 
 
 ## Bygging med gradle
 Som i de andre modulene bruker vi gradle til å bygge prosjektet

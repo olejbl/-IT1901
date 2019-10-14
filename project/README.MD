@@ -47,7 +47,7 @@ Brukergrensesnittet er laget med JavaFX og FXML. Det finner man i `fxui/src/main
 Lagring
 ---
 
-Lagringsaget (persistenslaget) inneholder klasser for lagring av data. Det foregår i modulene restApi og restserver
+Lagringsaget (persistenslaget) inneholder klasser for lagring av data. Det foregår i modulene restApi
 
 Testing
 ---
