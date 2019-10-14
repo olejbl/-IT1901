@@ -15,7 +15,7 @@ public class Serializer {
     private Listeklasse listeklasse;
 
     public Serializer() throws IOException {
-      //  new ObjectMapper().writeValue(new File("resources/json/json.text"), new Listeklasse(listeklasse.getWordList()));
+        new ObjectMapper().writeValue(new File("src/src.main.resources/json/src.src.test.json"), new Listeklasse(listeklasse.getWordList()));
     }
 
 }

@@ -5,16 +5,11 @@ import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.DeserializationContext;
 import com.fasterxml.jackson.databind.JsonDeserializer;
-import com.fasterxml.jackson.databind.JsonNode;
-//import com.fasterxml.jackson.databind.Json;
 import todo.core.Listeklasse;
 
-import java.io.FileInputStream;
 import java.io.IOException;
-import java.io.ObjectInputStream;
-import java.util.ArrayList;
 
-import com.fasterxml.jackson.databind.node.ArrayNode;
+//import com.fasterxml.jackson.databind.Json;
 
 public class ListeklasseDeserializer extends JsonDeserializer<Listeklasse> {
     @Override
