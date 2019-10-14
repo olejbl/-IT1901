@@ -48,12 +48,12 @@ public class FxAppController {
     listeklasse = new Listeklasse(arraylist);
   }
 
-  public void add() throws IOException {
-    ObservableList<String> items = FXCollections.observableArrayList(listeklasse.getWordList().toString());
-    listView.getItems().add(String.valueOf(new Todo(textIn.getText(),true)));
-    //updateTodoListView(); (metoden funker ikke)
-  }
 
+    public void add() throws IOException {
+      ObservableList<String> items = FXCollections.observableArrayList(listeklasse.getWordList().toString());
+      listView.getItems().add(String.valueOf(new Todo(textIn.getText(),true)));
+      //updateTodoListView(); (metoden funker ikke)
+    }
 
   @FXML //Lager lokalt, men er ikke meningen (har den pga. testing lokalt)
   public void save() throws Throwable {}
