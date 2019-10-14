@@ -1,4 +1,4 @@
-package todo.ui;
+package src.main.java.todo.ui;
 
 
 import com.fasterxml.jackson.core.type.TypeReference;
@@ -34,7 +34,6 @@ public class FxAppController {
     private ArrayList<Todo> arraylist = new ArrayList<>();
     private ArrayList<String> todoList = new ArrayList<>();
     private Todo todo;
-    private Serializer serializer;
 
 
 
@@ -44,31 +43,19 @@ public class FxAppController {
     private ObservableList<String> observableList = FXCollections.observableArrayList();
 
 
+
   @FXML //Initialiserer appen
     public void initialize() throws IOException {
       listeklasse = new Listeklasse(arraylist);
     }
 
-<<<<<<< HEAD
+
     public void add() throws IOException {
       ObservableList<String> items = FXCollections.observableArrayList(listeklasse.getWordList().toString());
       listView.getItems().add(String.valueOf(new Todo(textIn.getText(),true)));
       //updateTodoListView(); (metoden funker ikke)
     }
-=======
-    @FXML
-    public void save() throws Throwable {
-         try {
-             //io.save(listeklasse);
-             //listeklasseSerializerserializer.saveToFile(liste);
-             System.out.println("heihei");
-             serializer1.doSerializing(listeklasse);
 
-         }catch (IOException e){
-             textOut.setText("Noe gikk galt med lagring");
-             e.printStackTrace();
-         }
->>>>>>> e07e8b5dab8327786a0982846f45e3e31cbc6ffa
 
     @FXML //Lager lokalt, men er ikke meningen (har den pga. testing lokalt)
     public void save() throws Throwable {}
@@ -80,16 +67,24 @@ public class FxAppController {
         observableList.setAll(String.valueOf(toDoItems));
     }
 
+
     //Loader Elementer fra server (Funker ikke)
+
+    //funskjon som skal laste inn det som ble lagret ved save()-lfunskjonen
+
     @FXML
     public void load() {
         Listeklasse listeklasse = new RestTemplate().getForEntity("http://localhost:8080/save/" + 0,
                 Listeklasse.class).getBody();
         System.out.println(listeklasse.getWordList());
 
+
     }
 
     //Sletter alle elementene lagd til
+
+    // tømmer hele lista
+
     public void clear() {
       listeklasse = new Listeklasse(arraylist);
       listView.getItems().clear();
@@ -97,11 +92,9 @@ public class FxAppController {
 
 
 
-
-
-
-
-
-
+    //getter
+    public Listeklasse getListeklasse(){
+      return listeklasse;
+    }
 
 }
