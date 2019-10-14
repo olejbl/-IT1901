@@ -10,7 +10,7 @@ Modul for kjernelogikk og lagring
 Domenelaget inneholder `Listeklasse` som er logikken som håndteres av applikasjonen. 
 
 Domenelaget finnes i `core/src/main/java/todo/core`
-####Test
+#### Test
 Domenelaget testes ved klassen `Listeklassetest.java` og ligger i `core/src/test/todo/core`
 
 For å teste bruker vi jUnit, og for å vise testdekningsgrad bruker vi jacoco. Man får ut testdekningsgrad ved hjelp av `gradle jacocoTestReport`, da vil rapporten ligge i `build/reports/jacoco/test/html/index.html`.
@@ -20,7 +20,7 @@ Persistenslaget handler om fillagring. Her leses og skrives av dataene i domenel
 
 Persistenslaget finnes i `core/src/main/todo/filagring` 
 
-####Test
+#### Test
 Persistenslaget testes ved klassen `TestTodoIO.java` og ligger i `core/src/test/todo/filagring`
 
 For å teste bruker vi jUnit, og for å vise testdekningsgrad bruker vi jacoco. Man får ut testdekningsgrad ved hjelp av `gradle jacocoTestReport`, da vil rapporten ligge i `build/reports/jacoco/test/html/index.html`
