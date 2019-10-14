@@ -3,8 +3,6 @@ package todo.ui;
 import org.springframework.http.*;
 import org.springframework.web.client.RestTemplate;
 
-import java.util.ArrayList;
-
 public class RestClient {
 
     private static final String GET_TASK_ENDPOINT_URL = "http://localhost:8080/save";

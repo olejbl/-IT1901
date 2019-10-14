@@ -10,14 +10,9 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
-
-import org.springframework.http.HttpEntity;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.RestTemplate;
 import todo.core.Listeklasse;
 import todo.core.Todo;
-import todo.filagring.TodoInterface;
-
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -29,12 +24,10 @@ public class FxAppController {
   @FXML private Label textOut;
   @FXML private Button btn;
   @FXML private ListView<String> listView;
-    private TodoInterface io;
     private Listeklasse listeklasse;
     private ArrayList<Todo> arraylist = new ArrayList<>();
     private ArrayList<String> todoList = new ArrayList<>();
     private Todo todo;
-    private Serializer serializer;
 
 
 
@@ -49,26 +42,12 @@ public class FxAppController {
       listeklasse = new Listeklasse(arraylist);
     }
 
-<<<<<<< HEAD
     public void add() throws IOException {
       ObservableList<String> items = FXCollections.observableArrayList(listeklasse.getWordList().toString());
       listView.getItems().add(String.valueOf(new Todo(textIn.getText(),true)));
       //updateTodoListView(); (metoden funker ikke)
     }
-=======
-    @FXML
-    public void save() throws Throwable {
-         try {
-             //io.save(listeklasse);
-             //listeklasseSerializerserializer.saveToFile(liste);
-             System.out.println("heihei");
-             serializer1.doSerializing(listeklasse);
 
-         }catch (IOException e){
-             textOut.setText("Noe gikk galt med lagring");
-             e.printStackTrace();
-         }
->>>>>>> e07e8b5dab8327786a0982846f45e3e31cbc6ffa
 
     @FXML //Lager lokalt, men er ikke meningen (har den pga. testing lokalt)
     public void save() throws Throwable {}
