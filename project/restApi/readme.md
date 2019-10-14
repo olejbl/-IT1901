@@ -6,11 +6,11 @@ modul for REST-api
 ===
 
 ## REST-api
-Inneholder klassen 
+Inneholder klassene `ApiController.java` og `ProjectApplication.java` . 
 
 Vi bruker springboot til å lage rest-api og server. 
 Oppretter lokal server med localhost
 
-## bygging med gradle 
+## Bygging med gradle 
 Som de andre modulene bygges også rest-api-et med gradle. 
 

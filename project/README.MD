@@ -16,22 +16,22 @@ Dette prosjektet tar for seg bygging av en TODO-liste. Det er en trelagsapplikas
 For core:
 
 
-* src/main/java for koden til applikasjonen
+* `src/main/java` for koden til applikasjonen
 
-* scr/main/resources for tilhørende ressurser, f.eks. data-filer og FXML-filer, som brukes av applikasjonen.
+* `scr/main/resources` for tilhørende ressurser, f.eks. data-filer og FXML-filer, som brukes av applikasjonen.
 
-* scr/test/java for testkoden
+* `scr/test/java` for testkoden
 
-* scr/test/resources for tilhørende ressurser, f.eks. data-filer og FXML-filer, som brukes av testene.
+* `scr/test/resources` for tilhørende ressurser, f.eks. data-filer og FXML-filer, som brukes av testene.
 
 For fxui:
 
-* src/main/java/todoui for kontrollerklasse og applikasjonsklasse
-* src/main/resources for fxml-fil
+* `src/main/java/todoui` for kontrollerklasse og applikasjonsklasse
+* `src/main/resources` for fxml-fil
 
 for restapi:
-*
-*
+* `src/main/java/restAPI/Controllers` for kontrollklasse
+* `src/main/java/restAPI` for applikasjonsklasse 
 
 Domenelaget
 ---

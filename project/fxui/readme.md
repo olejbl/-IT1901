@@ -7,13 +7,18 @@ modul for brukergrensesnitt
 
 
 ## Brukergrensesnittlaget
+I dette lager ligger alt som har med det vi kan se, altså frontend. 
+Vi bruker JavaFX og Scenebuilder til å lage utseende på applikasjonen vår. 
 
+Oppsettet er som følger:
+
+* `src/main/java/todoui/FxApp` er 
+* `src/main/java/todoui/FxAppController` er kontrollerklassen
+* `src/main/resources/todoui/FxAppfxml` er fxml-filen som gjenspeiler hvordan vi vi lagde appen i scenebuilder  
 
 
 ## Bygging med gradle
-Persistenslaget handler om fillagring. Her leses og skrives av dataene i domenellaget. Vi bruker JSON til dette.
-
-Persistenslaget finnes i `core/src/main/todo/filagring` 
+Som i de andre modulene bruker vi gradle til å bygge prosjektet
 
 ___
 
