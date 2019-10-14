@@ -81,7 +81,8 @@ Testing
 ---
 Du kan teste appen ved å kjøre `gradle check`, og få ut testdekningsgrad ved hjelp av `gradle jacocoTestReport`, da vil rapporten ligge i `build/reports/jacoco/src.src.test/html/index.html`.
 
-##Artkitektur
+Artkitektur
+---
 ![Arkitektur](diagram.png)
 
 ###### tags: `Readme` `Documentation` `IT1901`
