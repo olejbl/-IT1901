@@ -28,16 +28,12 @@ public class Listeklasse {
         this.wordList = wordList;
     }
 
-<<<<<<< HEAD
+
     public Listeklasse(){
 
     }
 
     //legger til todo i wordList
-=======
-    public Listeklasse() {
-
-    }
     /*@JsonCreator
     public Listeklasse(@JsonProperty()ArrayList<Todo> wordList1){
         this.wordList = wordList;
@@ -49,7 +45,7 @@ public class Listeklasse {
         Listeklasse lestListe = new ObjectMapper().readValue(new File("/build/todo1.json"), Listeklasse.class);
     }
 */
->>>>>>> 65fd1f030917aa8b64c6aa243c644ec934747e0b
+
     public void wordListAdd(Todo todo) {
         wordList.add(todo);
     }
