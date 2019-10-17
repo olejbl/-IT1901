@@ -1,8 +1,7 @@
 package todo.core;
 
 import java.util.ArrayList;
-//testfx
-//mocking
+
 
 public class Listeklasse {
 
@@ -13,6 +12,10 @@ public class Listeklasse {
     //konstruktør
     public Listeklasse(ArrayList<Todo> wordList){
         this.wordList = wordList;
+    }
+
+    public Listeklasse(){
+
     }
 
     //legger til todo i wordList

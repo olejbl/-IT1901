@@ -3,7 +3,6 @@ package todo.ui;
 import org.springframework.http.*;
 import org.springframework.web.client.RestTemplate;
 
-import java.util.ArrayList;
 
 public class RestClient {
 

@@ -3,7 +3,8 @@ package todo.ui;
 
 import org.junit.Assert;
 import org.junit.Test;
-import src.main.java.todo.ui.FxAppController;
+
+import java.io.IOException;
 
 //Test av klassen FxAppController
 
@@ -12,7 +13,7 @@ public class FxAppControllerTest {
 
     // Tester at controller blir initialisert på riktig måte at den er null før og ikke null etter
     @Test
-    public void initTest() {
+    public void initTest() throws IOException {
         Assert.assertNull(controller);
         controller = new FxAppController();
         Assert.assertNotNull(controller);
