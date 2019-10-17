@@ -15,5 +15,4 @@ Oppretter lokal server med localhost
 Vi har flytta lagring, persistenslaget, over til rest-api-modulen. Her skjer serialisering og deserialisering, som lagrer data på serveren så vi ikke trenger å lagre lokalt. 
 
 ## Bygging med gradle 
-Som de andre modulene bygges også rest-api-et med gradle.   
-
+Som de andre modulene bygges også rest-api-et med gradle. 
