@@ -2,14 +2,11 @@ package todo.core;
 
 import org.junit.Assert;
 import org.junit.Test;
- //test av klassen Todo
+
 public class TodoTest {
 
     private Todo todo;
 
-
-    //oppretter todo-objekt, setter description til "hei", og done til false. Så sjekker om det er riktig med assertEquals. Setter setDone til true og sjekker om
-    // dette stemmer nå.
     @Test
     public void initTest() {
         todo = new Todo("Hei!",false);
