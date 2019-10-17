@@ -6,12 +6,9 @@ import org.junit.Test;
 
 import java.io.IOException;
 
-//Test av klassen FxAppController
-
 public class FxAppControllerTest {
     private FxAppController controller;
 
-    // Tester at controller blir initialisert på riktig måte at den er null før og ikke null etter
     @Test
     public void initTest() throws IOException {
         Assert.assertNull(controller);

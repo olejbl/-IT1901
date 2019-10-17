@@ -13,9 +13,15 @@ import javafx.scene.control.TextField;
 import org.springframework.web.client.RestTemplate;
 import todo.core.Listeklasse;
 import todo.core.Todo;
+
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+
+//import todo.filagring.TodoIO;
+//import todo.filagring.ListeklasseSerializer;
+
+
 
 
 public class FxAppController {
@@ -59,6 +65,17 @@ public class FxAppController {
     observableList.setAll(String.valueOf(toDoItems));
   }
 
+    /*
+    public void add(){
+        //listeklasse.wordListAdd(listeklasse.);
+        ObservableList<String> items = FXCollections.observableArrayList(listeklasse.getWordList().toString());
+        //listView.setItems(items);
+
+        listView.getItems().add(String.valueOf(new Todo(textIn.getText(),true)));
+    }
+
+     */
+
   //Loader Elementer fra server (Funker ikke)
   @FXML
   public void load() {
@@ -75,4 +92,9 @@ public class FxAppController {
   }
 
 
+
+    public Listeklasse getListeklasse(){
+      return listeklasse;
+    }
 }
+
