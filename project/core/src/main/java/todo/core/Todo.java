@@ -5,7 +5,11 @@ public class Todo {
     private String desc;
     private boolean done;
 
-    //konstruktør
+    /*@JsonCreator
+    public Todo(@JsonProperty("description") String desc, @JsonProperty("done") boolean done) {
+        this.desc = desc;
+        this.done = done;
+    }*/
     public Todo(String desc, boolean done) {
         this.desc = desc;
         this.done = done;

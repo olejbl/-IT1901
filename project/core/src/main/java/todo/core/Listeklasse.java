@@ -1,8 +1,7 @@
 package todo.core;
 
 import java.util.ArrayList;
-//testfx
-//mocking
+
 
 public class Listeklasse {
 
@@ -10,22 +9,56 @@ public class Listeklasse {
     private Todo todo;
     private String name;
 
-    //konstruktør
+    /*
+    private boolean done;
+    private String desc;
+    @JsonCreator
+    public Listeklasse(@JsonProperty("description") String desc, @JsonProperty("done") boolean done) {
+        this.setDescription(desc);
+        this.setDone(done);
+    }
+    private void setDone(boolean done) {
+        this.done = done;
+    }
+
+    private void setDescription(String desc) {
+        this.desc = desc;
+    }*/
     public Listeklasse(ArrayList<Todo> wordList){
         this.wordList = wordList;
     }
 
+
+    public Listeklasse(){
+
+    }
+
     //legger til todo i wordList
+    /*@JsonCreator
+    public Listeklasse(@JsonProperty()ArrayList<Todo> wordList1){
+        this.wordList = wordList;
+    }
+/*  //-------Kan slettes hvis Serializer og Deserializer klassene fungerer
+    public Listeklasse(ArrayList<Todo> wordList) throws IOException {
+        this.wordList = wordList;
+        new ObjectMapper().writeValue(new File("/build/"), new Listeklasse(wordList));
+        Listeklasse lestListe = new ObjectMapper().readValue(new File("/build/todo1.json"), Listeklasse.class);
+    }
+*/
+
     public void wordListAdd(Todo todo) {
         wordList.add(todo);
     }
-    //tar bort todo fra wordList
+
     public void wordListRemove(Todo todo) {
         wordList.remove(todo);
     }
-    //getter
+
     public ArrayList<Todo> getWordList() {
         return wordList;
     }
 
+    public String getName() {
+        return name;
+    }
 }
