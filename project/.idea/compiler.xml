@@ -5,8 +5,10 @@
       <profile default="true" name="Default" enabled="true" />
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="19.restserver.main" target="1.10" />
       <module name="19.restServer.main" target="1.8" />
       <module name="19.restServer.test" target="1.8" />
+      <module name="19.restserver.test" target="1.10" />
     </bytecodeTargetLevel>
   </component>
 </project>
