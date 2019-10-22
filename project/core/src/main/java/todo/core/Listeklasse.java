@@ -3,35 +3,23 @@ package todo.core;
 import java.util.ArrayList;
 
 
+
 public class Listeklasse {
+
 
     public static ArrayList<Todo> wordList = new ArrayList<>();
     private Todo todo;
     private String name;
 
-    /*
-    private boolean done;
-    private String desc;
-    @JsonCreator
-    public Listeklasse(@JsonProperty("description") String desc, @JsonProperty("done") boolean done) {
-        this.setDescription(desc);
-        this.setDone(done);
-    }
-    private void setDone(boolean done) {
-        this.done = done;
+    //konstruktør
+    public Listeklasse() {
+        // Default Konstruktør for deserializing (IKKE SLETT)
     }
 
-    private void setDescription(String desc) {
-        this.desc = desc;
-    }*/
     public Listeklasse(ArrayList<Todo> wordList){
         this.wordList = wordList;
     }
 
-
-    public Listeklasse(){
-
-    }
 
     //legger til todo i wordList
     /*@JsonCreator

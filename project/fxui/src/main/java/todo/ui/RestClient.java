@@ -1,7 +1,18 @@
 package todo.ui;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.http.*;
+import org.springframework.http.converter.json.MappingJacksonHttpMessageConverter;
 import org.springframework.web.client.RestTemplate;
+import todo.core.Listeklasse;
+import todo.core.Todo;
+
+import java.lang.reflect.ParameterizedType;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 
 public class RestClient {
@@ -14,6 +25,7 @@ public class RestClient {
     private RestTemplate rest;
     private HttpHeaders headers;
     private HttpStatus status;
+    private ObjectMapper objectMapper;
 
     //Constructer som definerer parametere. RestTemplate er en funksjon fra Springboot som hjelper å koble mot server
     public RestClient() {
@@ -21,6 +33,7 @@ public class RestClient {
         this.headers = new HttpHeaders();
         headers.add("Content-Type", "application/json");
         headers.add("Accept", "*/*");
+        this.objectMapper = new ObjectMapper();
     }
 
     //funksjon for å kunne hente ting fra server
@@ -32,9 +45,16 @@ public class RestClient {
     }
 
     //funksjon for å kunne poste ting opp til server
-    public String post(String uri, String json) {
-        HttpEntity<String> requestEntity = new HttpEntity<String>(json, headers);
-        ResponseEntity<String> responseEntity = rest.exchange(server + uri, HttpMethod.POST, requestEntity, String.class);
+    public String post(String uri, Listeklasse listeklasse) throws JsonProcessingException {
+        HttpHeaders headers2 = new HttpHeaders();
+        String json = objectMapper.writeValueAsString(listeklasse);
+        headers2.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
+        HttpEntity<String> requestEntity = new HttpEntity<>(json, headers2);
+        ResponseEntity<String> responseEntity = rest.exchange(
+                server + uri,
+                HttpMethod.POST,
+                requestEntity,
+                String.class);
         this.setStatus(responseEntity.getStatusCode());
         return responseEntity.getBody();
     }

@@ -1,9 +1,14 @@
 package todo.core;
 
+
 public class Todo {
 
     private String desc;
     private boolean done;
+
+    public Todo() {
+        // Default Konstruktør for deserializing (IKKE SLETT)
+    }
 
     public Todo(String desc, boolean done) {
         this.desc = desc;

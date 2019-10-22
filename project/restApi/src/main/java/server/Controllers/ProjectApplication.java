@@ -1,9 +1,12 @@
-package restAPI.src.main.java.gr1919.project;
+package server.Controllers;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+import org.springframework.context.annotation.ComponentScan;
 
-@SpringBootApplication
+@EntityScan("todo.core")
+@SpringBootApplication(scanBasePackages = {"server"})
 public class ProjectApplication {
 
 	public static void main(String[] args) {
