@@ -1,0 +1,41 @@
+@startuml
+
+class Listeklasse{
+- String : name
+- Todo : todo
+ + {static} ArrayList : wordList
+---
++ void wordListAdd()
++ void wordListRemove()
++  ArrayList<Todo> getWordList()
++ String getName()
++ Listeklasse()
+}
+
+class Todo{
+- String : desc
+- boolean : done
+----
++ Todo()
++ void setDone()
++ void setDesc()
++ boolean getDone()
++ String getDesc()
++ String toString()
+}
+
+Listeklasse "1" <--> "many"  Todo
+
+FxApp --|> Application
+class FxApp{
+---
++ void start()
++ {static} main()
+}
+
+class FxAppController {
+
+}
+
+
+@enduml

@@ -83,6 +83,6 @@ Du kan teste appen ved å kjøre `gradle check`, og få ut testdekningsgrad ved 
 
 Artkitektur
 ---
-![Arkitektur](diagram.png)
+![Arkitektur](avhengighet.png)
 
 ###### tags: `Readme` `Documentation` `IT1901`
