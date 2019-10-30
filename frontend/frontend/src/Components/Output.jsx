@@ -3,7 +3,9 @@ import React, { Component } from 'react';
 class Output extends Component {
     state = {  }
     render() { 
-        return (  );
+        return ( 
+            console.log("hei")
+         );
     }
 }
  

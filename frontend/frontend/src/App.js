@@ -2,6 +2,7 @@
 import React, { Component } from 'react';
 import Button from './Components/Button';
 import AddTodo from './AddTodo';
+import Input from "./Components/Input.jsx";
 //import Todos from 'Todos';
 
 
@@ -29,7 +30,8 @@ class App extends Component {
      <h1 className="center blue-text">Todo</h1>
      {/*<AddTodo addTodo={ this.addTodo }></AddTodo>*/}
     <button type='button' onClick={this.onAddItem}> add</button>
-    <input type='text' value={this.state.value} onChange= {this.onChangeValue}></input>
+    {/*<input type='text' value={this.state.value} onChange= {this.onChangeValue}></input>*/}
+    <Input> </Input>
     {/*<Todos todos={this.state.todos}></Todos> */}
     <div> 
       <ul>{ this.state.todos.map(item => (
