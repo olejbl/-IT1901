@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types'; //for tilstandskontroll og bug-check
 import Input from '../Input/Input';
 
@@ -12,8 +12,12 @@ function TaskForm(props) {
 
     let handleFieldChange = event => {
         const value = event.target.value;
-        const content = event.target.content
+        const content = event.target.name;
         setTask({ ...task, [content]: value});
+        console.log("Value: ", value);
+        console.log("Content : ", content);
+        console.log("TasK: ", task);
+        
     };
 
     let submitTask = evt => {
@@ -26,7 +30,7 @@ function TaskForm(props) {
     return (
         <form onSubmit={submitTask}>
             <Input
-                content="content"
+                name="content"
                 type="text"
                 onChange={handleFieldChange}
                 label="Task: "

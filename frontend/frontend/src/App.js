@@ -1,13 +1,14 @@
 import React, { Component } from 'react'
 import './App.css'
-import TodoList from './Components/TodoList'
+import logo from './logo.svg';
 import TodoItems from './Components/TodoItems'
 
 function App() {
   return (
     <div className="App">
       <div>
-        <h1>TodoList AOPop </h1>
+        <img src={logo} className="App-logo"/>
+        <h1>TodoList App</h1>
       </div>
       <TodoItems/>
     </div>
