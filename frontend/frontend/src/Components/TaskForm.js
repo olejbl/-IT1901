@@ -1,5 +1,5 @@
-import React, {useState} from './node_modules/react';
-import PropTypes from './node_modules/prop-types'; //for tilstandskontroll og bug-check
+import React, {useState} from 'react';
+import PropTypes from 'prop-types'; //for tilstandskontroll og bug-check
 import Input from '../Input/Input';
 
 const defaultState = {
@@ -37,7 +37,7 @@ function TaskForm(props) {
     );
 }
 
-TaskForm.PropTypes = {
+TaskForm.propTypes = {
     addTask: PropTypes.func.isRequired,
 }
 export default TaskForm;

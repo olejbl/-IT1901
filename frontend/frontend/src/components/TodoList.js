@@ -1,6 +1,6 @@
-import React from './node_modules/react';
-import PropTypes from './node_modules/prop-types';
-import Button from '../Button'
+import React from 'react';
+import PropTypes from 'prop-types';
+import Button from './Button'
 //Lager todolista
 function Task( {task, deleteTask}) {
   let {id, content} = task;
