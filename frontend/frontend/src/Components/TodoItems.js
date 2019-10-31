@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import ListFilter from './ListFilter';
-//import './Tasks.css';
+import './TodoItems.css';
 import TaskForm from './TaskForm';
 import TaskList from './TodoList';
 
@@ -31,7 +31,6 @@ export default function Tasks() {
 
   return (
     <div className="Tasks">
-      <h2>Tasks</h2>
       <TaskList
         deleteTask={handleDeleteTask}
         tasks={tasks}
