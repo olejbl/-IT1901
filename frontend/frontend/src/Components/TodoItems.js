@@ -5,7 +5,12 @@ import TaskForm from './TaskForm';
 import TaskList from './TodoList';
 
 export default function Tasks() {
-  let [tasks, setTasks] = useState([]);
+  let [tasks, setTasks] = useState([
+
+    {
+      content: 'Dette er en eksempelopppgave (content i TodoItems)',
+    }
+  ]);
   //let [filterText, setFilterText] = useState('');
 
   useEffect(() => {
@@ -16,6 +21,7 @@ export default function Tasks() {
 
   let handleAddTask = task => {
     setTasks(tasks.concat(task));
+    console.log("handleAddTask content: " + task)
   };
 
   let handleDeleteTask = id => {

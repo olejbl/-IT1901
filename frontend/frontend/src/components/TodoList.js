@@ -23,9 +23,9 @@ Task.propTypes = {
 export default function TaskList (props) {
   let { deleteTask, tasks, filterText } = props;
   let taskList = tasks
-    .filter(task =>
+    /* .filter(task =>
       task.name.toLowerCase().includes(filterText.toLowerCase()),
-      )
+      ) */
     .map(task => (
       <Task
         deleteTask={deleteTask}
@@ -42,6 +42,7 @@ export default function TaskList (props) {
           <th>Delete</th>
         </tr>
         </thead>
+        <tbody>{taskList}</tbody>
       </table>
     )
 }
