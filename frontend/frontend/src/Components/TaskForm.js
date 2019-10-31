@@ -12,21 +12,24 @@ function TaskForm(props) {
 
     let handleFieldChange = event => {
         const value = event.target.value;
-        const content = event.target.name;
-        setTask({ ...task, [content]: value});
+        const name = event.target.name;
+        setTask({ ...task, [name]: value});
         console.log("Value: ", value);
         console.log("Content : ", content);
         console.log("TasK: ", task);
         
     };
+    let {content} = task;
+    console.log("content", content)
 
     let submitTask = evt => {
         evt.preventDefault(); //for å slippe å reloade på submit
-        addTask({ ...content, id: new Date().getTime() });
+        addTask({content, id: new Date().getTime() });
+        console.log("THIS IS THE TASK", task)
         setTask(defaultState);
+        console.log("dfSt " + defaultState.content);
     };
-
-    let {content} = task;
+    
     return (
         <form onSubmit={submitTask}>
             <Input
@@ -34,7 +37,7 @@ function TaskForm(props) {
                 type="text"
                 onChange={handleFieldChange}
                 label="Task: "
-                value={content}
+                value={content.toString()}
             />
             <Input className="btn" name="submit" type="submit" />
         </form>

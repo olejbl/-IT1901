@@ -10,6 +10,7 @@ export default function Tasks() {
     {
       content: 'Dette er en eksempelopppgave (content i TodoItems)',
     }
+    
   ]);
   //let [filterText, setFilterText] = useState('');
 
