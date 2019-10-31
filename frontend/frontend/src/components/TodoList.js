@@ -1,11 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Button from './Button'
+import './TodoList.css'
+import styled from 'styled-components'
+
 //Lager todolista
 function Task( {task, deleteTask}) {
   let {id, content} = task;
   return (
-    <tr>
+    <tr className="TableItems">
       <td>{content}</td>
     <td> <Button onClick={() => deleteTask(id)}> Delete </Button>
     </td>
@@ -35,14 +38,14 @@ export default function TaskList (props) {
     ));
 
     return (
-      <table>
-        <thead>
+      <table >
+        <thead >
         <tr>
           <th>Task</th>
           <th>Delete</th>
         </tr>
         </thead>
-        <tbody>{taskList}</tbody>
+        <tbody >{taskList}</tbody>
       </table>
     )
 }
