@@ -15,6 +15,7 @@ public class ApiController {
     //Metoder for rest API//
 
     //Get metode for å hente fra server
+    @CrossOrigin(origins = "http://localhost:3000")
     @GetMapping(value = "/all")
     public Listeklasse getWordList() throws IOException {
         return service.getAll();

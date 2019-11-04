@@ -33,7 +33,7 @@ function TaskForm(props) {
     return (
         <form onSubmit={submitTask}>
             <Input
-                name="content"
+                name="content"  
                 type="text"
                 onChange={handleFieldChange}
                 label="Task: "
