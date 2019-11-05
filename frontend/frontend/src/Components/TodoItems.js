@@ -20,9 +20,9 @@ export default function Tasks() {
     fetch('/data.json')
     .then(response => response.json())
     .then(todos => setTasks(todos));
-  }, []);*/
+  }, []);
 
-
+*/
   fetch('http://localhost:8080/all')
   .then(function(response){
     if (response.status != 200){

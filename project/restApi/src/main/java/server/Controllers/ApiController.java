@@ -11,16 +11,21 @@ public class ApiController {
 
     public ApiController () {
         service = new Service();
+        
     }
     //Metoder for rest API//
 
     //Get metode for å hente fra server
-    @CrossOrigin(origins = "http://localhost:3000")
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @GetMapping(value = "/all")
     public Listeklasse getWordList() throws IOException {
         return service.getAll();
+
     }
 
+
+
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @PostMapping(value="/save")
     public String retrieveList(@RequestBody String listeklasseJSON) throws IOException {
         System.out.println("Request received");
