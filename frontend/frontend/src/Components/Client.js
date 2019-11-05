@@ -1,5 +1,5 @@
 export function reqListener () {
-    console.log("test");
+    console.log("Client is refreshed");
     return "test"
 }
   
@@ -10,6 +10,6 @@ export function reqListener () {
   oReq.send();
 
   window.addEventListener('load', (event) => {
-    console.log('page is fully loaded');
+    console.log('Page is fully loaded from Client.js');
   });
 export default reqListener;

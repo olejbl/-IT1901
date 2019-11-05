@@ -30,6 +30,7 @@ public class ApiController {
     public String retrieveList(@RequestBody String listeklasseJSON) throws IOException {
         System.out.println("Request received");
         System.out.println(listeklasseJSON);
+        System.out.println("Trying to save value " + listeklasseJSON);
         ObjectMapper objectMapper = new ObjectMapper();
         Listeklasse listeklasse = objectMapper.readValue(listeklasseJSON, Listeklasse.class);
         System.out.println("Converted listeklasse");

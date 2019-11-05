@@ -14,20 +14,14 @@ function TaskForm(props) {
         const value = event.target.value;
         const name = event.target.name;
         setTask({ ...task, [name]: value});
-        console.log("Value: ", value);
-        console.log("Content : ", content);
-        console.log("TasK: ", task);
-        
     };
     let {content} = task;
-    console.log("content", content)
+    //console.log("content", content)
 
     let submitTask = evt => {
         evt.preventDefault(); //for å slippe å reloade på submit
         addTask({content, id: new Date().getTime() });
-        console.log("THIS IS THE TASK", task)
         setTask(defaultState);
-        console.log("dfSt " + defaultState.content);
 
         
         let headers = new Headers();
@@ -43,22 +37,17 @@ function TaskForm(props) {
             method: 'POST',
             mode: 'no-cors',
             credentials: 'include',
-            headers: headers,
+            headers: headers, 
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
             body: JSON.stringify({
-            firstParam: 'yourValue',
-            secondParam: 'yourOtherValue',
+                content,
             })})
 
         .then(response => response.text())
-            .then(contents => console.log(contents))
+            .then(contents => console.log(JSON.stringify(contents), " is the contents from fetch response /save POST"))
             .catch(() => console.log("Can’t access " + url + " response. Blocked by browser?"))
-            
-        
-    
-        
     }
-   
-    
     return (
         <form onSubmit={submitTask}>
             <Input

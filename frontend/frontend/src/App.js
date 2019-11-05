@@ -1,10 +1,7 @@
-import React, { Component } from 'react'
+import React from 'react'
 import './App.css'
 import TodoItems from './Components/TodoItems'
-import styled from 'styled-components'
 
-
-const Button = styled.button
 
 
 function App() {

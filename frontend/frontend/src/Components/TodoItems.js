@@ -1,5 +1,4 @@
 import React, {useState, useEffect} from 'react';
-import ListFilter from './ListFilter';
 import TaskForm from './TaskForm';
 import TaskList from './TodoList';
 import Client from './Client'
@@ -13,15 +12,20 @@ export default function Tasks() {
       content: 'Dette er en eksempelopppgave (content i TodoItems)',
     }
   ]);
-  let klient = new Client;
-  //let [filterText, setFilterText] = useState('');
+  let klient = new Client();
 
   useEffect(() => {
-    fetch('http://localhost:8080/all')
+    fetch('http://localhost:8080/all',{
+      crossDomain:true,
+      method: 'GET',
+      mode: 'no-cors',
+      credentials: 'include',
+      }
+    )
     .then(function(response){
       console.log('TodoItems is fetching.. ',response);
-      if (response.status != 200){
-        console.log('problem'+ response.status);
+      if (response.status !== 200){
+        console.log('Fetching failed, response status: '+ response.status);
         return;
       }
       response.json().then(function(data){ //was data instead of tasks, testing
@@ -29,7 +33,7 @@ export default function Tasks() {
       });
     })
     .catch(function(err) {
-      console.log('fetch error: ' , err);
+      console.log('Fetch error: ' , err);
     });
 
   }, []);
@@ -41,7 +45,7 @@ export default function Tasks() {
 
   let handleAddTask = task => {
     setTasks(tasks.concat(task));
-    console.log("handleAddTask content: " + task)
+    console.log("handleAddTask content: " + JSON.stringify(task))
   };
 
   let handleDeleteTask = id => {
