@@ -11,4 +11,9 @@
 .App {
   text-align: center;
   background-color: #f9e4b7;
+  min-height: 100vh;
+}
+
+h1 {
+  text-shadow: 1px -1px 1px, 1px 1px 1px;
 }

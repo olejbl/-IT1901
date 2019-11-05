@@ -8,7 +8,7 @@ export default function Tasks() {
   let [tasks, setTasks] = useState([
 
     {
-      content: 'Dette er en eksempelopppgave (content i TodoItems)',
+      content: '(Dette er en eksempelopppgave) ',
     }
     
   ]);

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types'; //for tilstandskontroll og bug-check
 import Input from '../Input/Input';
+import './TaskForm.css'
 
 const defaultState = {
     content: '',
@@ -31,7 +32,7 @@ function TaskForm(props) {
     };
     
     return (
-        <form onSubmit={submitTask}>
+        <form ClassName="Items" onSubmit={submitTask}>
             <Input
                 name="content"
                 type="text"
@@ -39,7 +40,7 @@ function TaskForm(props) {
                 label="Task: "
                 value={content.toString()}
             />
-            <Input className="btn" name="submit" type="submit" />
+            <Input className="btnSend" name="submit" type="submit" />
         </form>
     );
 }
