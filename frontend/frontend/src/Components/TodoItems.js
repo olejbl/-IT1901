@@ -15,28 +15,29 @@ export default function Tasks() {
   ]);
   let klient = new Client;
   //let [filterText, setFilterText] = useState('');
-/*
+
   useEffect(() => {
-    fetch('/data.json')
-    .then(response => response.json())
-    .then(todos => setTasks(todos));
+    fetch('http://localhost:8080/all')
+    .then(function(response){
+      console.log('TodoItems is fetching.. ',response);
+      if (response.status != 200){
+        console.log('problem'+ response.status);
+        return;
+      }
+      response.json().then(function(data){ //was data instead of tasks, testing
+        console.log(data, " is a response");
+      });
+    })
+    .catch(function(err) {
+      console.log('fetch error: ' , err);
+    });
+
   }, []);
 
-*/
-  fetch('http://localhost:8080/all')
-  .then(function(response){
-    if (response.status != 200){
-      console.log('problem'+ response.status);
-      return;
-    }
-    response.json().then(function(data){
-      console.log(data);
-    }) ;
-  })
-  .catch(function(err) {
-    console.log('fetch error: ' , err);
 
-  });
+  
+
+ // });
 
   let handleAddTask = task => {
     setTasks(tasks.concat(task));

@@ -37,8 +37,9 @@ function TaskForm(props) {
          headers.append('Origin','http://localhost:8080');
 
         
-        const url = 'http://localhost:8080/';
+        const url = 'http://localhost:8080/save';
         fetch(url, {
+            crossDomain:true,
             method: 'POST',
             mode: 'no-cors',
             credentials: 'include',
