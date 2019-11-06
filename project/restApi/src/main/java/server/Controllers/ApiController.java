@@ -19,6 +19,8 @@ public class ApiController {
     @CrossOrigin(origins = "*", allowedHeaders = "*")
     @GetMapping(value = "/all")
     public Listeklasse getWordList() throws IOException {
+        System.out.println("Returning list..");
+        System.out.println(service.getAll());
         return service.getAll();
 
     }

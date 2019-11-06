@@ -1,5 +1,7 @@
 package todo.core;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import java.util.ArrayList;
 
 
@@ -8,7 +10,9 @@ public class Listeklasse {
 
 
     public static ArrayList<Todo> wordList = new ArrayList<>();
+    @JsonProperty("todo")
     private Todo todo;
+    @JsonProperty("name")
     private String name;
 
     //konstruktør

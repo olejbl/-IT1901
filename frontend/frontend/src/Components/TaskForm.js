@@ -30,6 +30,12 @@ function TaskForm(props) {
          //headers.append('Accept', 'application/json');
          headers.append('Origin','http://localhost:8080');
 
+         const data = {
+             wordList: [{
+                done: true,
+                description: content,
+             }]
+         }
         
         const url = 'http://localhost:8080/save';
         fetch(url, {
@@ -40,9 +46,9 @@ function TaskForm(props) {
             headers: headers, 
             'Accept': 'application/json',
             'Content-Type': 'application/json',
-            body: JSON.stringify({
-                content,
-            })})
+            body: JSON.stringify(
+                data
+            )})
 
         .then(response => response.text())
             .then(contents => console.log(JSON.stringify(contents), " is the contents from fetch response /save POST"))
