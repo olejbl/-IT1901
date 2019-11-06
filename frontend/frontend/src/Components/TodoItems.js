@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import TaskForm from './TaskForm';
 import TaskList from './TodoList';
-import Client from './Client'
+import reqListener from './Client'
 import Button from './Button';
 
 
@@ -12,7 +12,7 @@ export default function Tasks() {
       content: 'Dette er en eksempelopppgave (content i TodoItems)',
     }
   ]);
-  let klient = new Client();
+//  let klient = new Client();
 
   useEffect(() => {
     fetch('http://localhost:8080/all',{
@@ -22,6 +22,7 @@ export default function Tasks() {
       credentials: 'include',
       }
     )
+    .then(res => res.json())
     .then(function(response){
       console.log('TodoItems is fetching.. ',response);
       if (response.status !== 200){
@@ -69,7 +70,7 @@ export default function Tasks() {
         tasks={tasks}
       />
       <TaskForm addTask={handleAddTask} />
-      <Button onClick= {klient.reqListener}>Load</Button>
+      <Button onClick= {reqListener}>Load</Button>
     </div>
   )
 }

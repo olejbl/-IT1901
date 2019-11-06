@@ -1,4 +1,4 @@
-export function reqListener () {
+function reqListener () {
     console.log("Client is refreshed");
     return "test"
 }
