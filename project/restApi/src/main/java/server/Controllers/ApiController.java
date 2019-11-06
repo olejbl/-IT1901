@@ -22,7 +22,6 @@ public class ApiController {
         System.out.println("Returning list..");
         System.out.println(service.getAll());
         return service.getAll();
-
     }
 
 
@@ -30,7 +29,7 @@ public class ApiController {
     @CrossOrigin(origins = "*", allowedHeaders = "*")
     @PostMapping(value="/save")
     public String retrieveList(@RequestBody String listeklasseJSON) throws IOException {
-        System.out.println("Request received");
+        System.out.println("Request received: ");
         System.out.println(listeklasseJSON);
         System.out.println("Trying to save value " + listeklasseJSON);
         ObjectMapper objectMapper = new ObjectMapper();

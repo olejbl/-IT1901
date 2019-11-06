@@ -38,9 +38,9 @@ public class Listeklasse {
     }
 */
 
-    public void wordListAdd(Todo todo) {
+    /*public void wordListAdd(Todo todo) {
         wordList.add(todo);
-    }
+    }*/
 
     public void wordListRemove(Todo todo) {
         wordList.remove(todo);

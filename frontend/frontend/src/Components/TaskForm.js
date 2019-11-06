@@ -16,26 +16,23 @@ function TaskForm(props) {
         setTask({ ...task, [name]: value});
     };
     let {content} = task;
-    //console.log("content", content)
 
     let submitTask = evt => {
         evt.preventDefault(); //for å slippe å reloade på submit
         addTask({content, id: new Date().getTime() });
         setTask(defaultState);
+        console.log("Default State: ", defaultState)
 
         
         let headers = new Headers();
+        headers.append('Origin','http://localhost:8080');
 
-         //headers.append('Content-Type', 'application/json');
-         //headers.append('Accept', 'application/json');
-         headers.append('Origin','http://localhost:8080');
-
-         const data = {
-             wordList: [{
-                done: true,
-                description: content,
-             }]
-         }
+        const data = {
+            wordList: [{
+            done: true,
+            description: content,
+            }]
+        }
         
         const url = 'http://localhost:8080/save';
         fetch(url, {
