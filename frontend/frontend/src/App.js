@@ -12,7 +12,7 @@ function App() {
   return (
     <div className="App">
       <div className ="Container">
-        <h1>TodoList App</h1>
+        <h1>~ Todo List ~</h1>
         <TodoItems/>
       </div>
      

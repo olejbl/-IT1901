@@ -1,4 +1,4 @@
-.TableItems {
+.tableItems {
     margin-left: 10px;
     margin-right: 10px;
     margin-bottom: 3px;
@@ -6,7 +6,15 @@
     border:10px;
     border-bottom-style: solid;
     overflow: auto;
-
+    
     box-shadow:0px 1px 0px  black;
     
+}
+
+.btnContainer{
+    padding-left: 2%;   
+}
+
+.delLabel{
+    padding-left: 2%;   
 }
