@@ -45,7 +45,7 @@ export default function TaskList (props) {
           <th className="delLabel">Delete</th>
         </tr>
         </thead>
-        <tbody className="ok">{taskList}</tbody>
+        <tbody>{taskList}</tbody>
       </table>
     )
 }

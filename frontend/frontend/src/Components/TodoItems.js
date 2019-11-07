@@ -30,7 +30,7 @@ export default function Tasks() {
   };
 
   return (
-    <div className="Tasks">
+    <div className="tasks">
       <TaskList
         deleteTask={handleDeleteTask}
         tasks={tasks}

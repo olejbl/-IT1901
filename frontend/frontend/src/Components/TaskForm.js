@@ -32,12 +32,12 @@ function TaskForm(props) {
     };
     
     return (
-        <form ClassName="Items" onSubmit={submitTask}>
+        <form onSubmit={submitTask}>
             <Input
                 name="content"
                 type="text"
                 onChange={handleFieldChange}
-                label="Task: "
+                label="Add task: "
                 value={content.toString()}
             />
             <Input className="btnSend" name="submit" type="submit" />
