@@ -3,6 +3,8 @@ import TaskForm from './TaskForm';
 import TaskList from './TodoList';
 import reqListener from './Client'
 import Button from './Button';
+import axios from "axios";
+
 
 
 export default function Tasks() {
@@ -15,23 +17,23 @@ export default function Tasks() {
 //  let klient = new Client();
 
   useEffect(() => {
-    fetch('http://localhost:8080/all',{
+    axios.get('http://localhost:8080/all',{
       crossDomain:true,
       method: 'GET',
       mode: 'no-cors',
       credentials: 'include',
       }
     )
-    .then(res => res.json())
-    .then(function(response){
-      console.log('TodoItems is fetching.. ',response);
-      if (response.status !== 200){
-        console.log('Fetching failed, response status: '+ response.status);
+    .then(function(res){
+      console.log('TodoItems is fetching.. ',res);
+      if (res.status !== 200){
+        console.log('Fetching failed, response status: '+ res.status);
         return;
       }
-      response.json().then(function(data){ //was data instead of tasks, testing
-        console.log(data, " is a response");
-      });
+      console.log(res.data.wordList)
+      //res.json().then(function(data){ //was data instead of tasks, testing
+        //console.log(data, " is a response");
+     // });
     })
     .catch(function(err) {
       console.log('Fetch error: ' , err);
