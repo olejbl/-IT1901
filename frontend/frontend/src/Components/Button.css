@@ -2,17 +2,41 @@
   display: inline-block;
   -webkit-transition: background-color .3s ease;
   transition: background-color .3s ease;
-  padding: 0.6em;
+  padding: 0.225em;
+  border: none;
+  font-size: 0.85em;
+  color: white;
+  background-color: #ff6666
+  ;
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 0.25rem;
+  font-weight: 550;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.btn:hover {
+  background-color: #ff3232
+  ;
+}
+
+.btnSend {
+  display: inline-block;
+  -webkit-transition: background-color .3s ease;
+  transition: background-color .3s ease;
+  padding: 0.4em;
   border: none;
   font-size: 1em;
   color: white;
-  background-color: #009682;
+  background-color: #ff3232;
   cursor: pointer;
   text-decoration: none;
   border-radius: 0.25rem;
   font-weight: 600;
+  margin: 1.5%;
 }
 
-.btn:hover {
-  background-color: #007E6D;
+.btnSend:hover {
+  background-color: #ff0000;
 }

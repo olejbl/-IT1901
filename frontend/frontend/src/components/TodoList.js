@@ -7,9 +7,9 @@ import './TodoList.css'
 function Task( {task, deleteTask}) {
   let {id, description} = task;
   return (
-    <tr className="TableItems">
-      <td>{description}</td>
-    <td> <Button onClick={() => deleteTask(id)}> Delete </Button>
+    <tr className="tableItems">
+      <td>{content}</td>
+    <td className="btnContainer"> <Button onClick={() => deleteTask(id)}> Delete </Button>
     </td>
     </tr>
     
@@ -32,10 +32,10 @@ export default function TaskList (props) {
         <thead >
         <tr>
           <th>Task</th>
-          <th>Delete</th>
+          <th className="delLabel">Delete</th>
         </tr>
         </thead>
-        <tbody >{taskList}</tbody>
+        <tbody>{taskList}</tbody>
       </table>
     )
 }

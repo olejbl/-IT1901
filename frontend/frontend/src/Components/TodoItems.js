@@ -58,8 +58,7 @@ export default function Tasks() {
   */
 
   return (
-    <div className="Tasks">
-      <h2>Tasks</h2>
+    <div className="tasks">
       <TaskList
         deleteTask={handleDeleteTask}
         tasks={tasks}
