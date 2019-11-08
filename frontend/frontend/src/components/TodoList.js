@@ -8,7 +8,7 @@ function Task( {task, deleteTask}) {
   let {id, description} = task;
   return (
     <tr className="tableItems">
-      <td>{content}</td>
+      <td>{description}</td>
     <td className="btnContainer"> <Button onClick={() => deleteTask(id)}> Delete </Button>
     </td>
     </tr>
