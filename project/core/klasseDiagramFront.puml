@@ -1,0 +1,49 @@
+@startuml
+
+class App {
+---
+App()
+
+}
+class index{
+}
+
+class serviceWorker{
+---
+boolean isLocalHost()
+register()
+registerValidSW()
+checkValidServiceWorker()
+unregister()
+}
+
+class Components.Button{
+---
+Button(props)
+}
+
+class Components.TodoItems{
+---
+Tasks()
+useEffects()
+handleAddTask(task)
+handleDeleteTask()
+ }
+
+class Components.TodoList{
+}
+
+class Components.TaskForm{
+---
+TaskForm(props)
+submitTask()
+handleFieldChange()
+
+}
+
+class Input.Input {
+Input(props)
+}
+
+
+@enduml
