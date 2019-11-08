@@ -5,10 +5,10 @@ import './TodoList.css'
 
 //Lager todolista
 function Task( {task, deleteTask}) {
-  let {id, content} = task;
+  let {id, description} = task;
   return (
     <tr className="TableItems">
-      <td>{content}</td>
+      <td>{description}</td>
     <td> <Button onClick={() => deleteTask(id)}> Delete </Button>
     </td>
     </tr>

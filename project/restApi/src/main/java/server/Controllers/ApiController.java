@@ -22,7 +22,6 @@ public class ApiController {
         System.out.println("Returning list..");
         System.out.println(service.getAll());
         return service.getAll();
-    }
 
 
 

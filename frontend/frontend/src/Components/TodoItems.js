@@ -1,22 +1,16 @@
 import React, {useState, useEffect} from 'react';
 import TaskForm from './TaskForm';
 import TaskList from './TodoList';
-import reqListener from './Client'
+//import reqListener from './Client'
 import Button from './Button';
 import axios from "axios";
 
 
 
 export default function Tasks() {
-  let [tasks, setTasks] = useState([
-
-    {
-      content: 'Dette er en eksempelopppgave (content i TodoItems)',
-    }
-  ]);
-//  let klient = new Client();
-
+  let [tasks, setTasks] = useState([]);
   useEffect(() => {
+    
     axios.get('http://localhost:8080/all',{
       crossDomain:true,
       method: 'GET',
@@ -30,10 +24,9 @@ export default function Tasks() {
         console.log('Fetching failed, response status: '+ res.status);
         return;
       }
+      // set tasks here, importing from axios
+      setTasks(res.data.wordList);
       console.log(res.data.wordList)
-      //res.json().then(function(data){ //was data instead of tasks, testing
-        //console.log(data, " is a response");
-     // });
     })
     .catch(function(err) {
       console.log('Fetch error: ' , err);
@@ -72,7 +65,7 @@ export default function Tasks() {
         tasks={tasks}
       />
       <TaskForm addTask={handleAddTask} />
-      <Button onClick= {reqListener}>Load</Button>
+      <Button onClick= {console.log("Button:)")}>Load</Button>
     </div>
   )
 }
