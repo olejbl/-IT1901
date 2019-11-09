@@ -4,36 +4,36 @@ package todo.core;
 public class Todo {
 
     private String desc;
-    private boolean done;
+    private double id;
 
     public Todo() {
         // Default Konstruktør for deserializing (IKKE SLETT)
     }
 
-    public Todo(String desc, boolean done) {
+    public Todo(String desc, double id) {
         this.desc = desc;
-        this.done = done;
+        this.id = id;
     }
 
     //Setterss
-    public void setDone(boolean done) {
-        this.done = done;
+    public void setId(double id) {
+        this.id = id;
     }
-    public void setDescription(String desc) {
+    public void setContent(String desc) {
         this.desc = desc;
     }
 
     //Getters
-    public String getDescription(){
+    public String getContent(){
         return desc;
     }
 
-    public boolean getDone(){
-        return done;
+    public double getId(){
+        return id;
     }
 
     @Override
     public String toString() {
-        return getDescription();
+        return getContent();
     }
 }

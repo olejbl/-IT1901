@@ -21,7 +21,8 @@ function TaskForm(props) {
     let submitTask = evt => {
         evt.preventDefault(); //for å slippe å reloade på submit
         addTask({content, id: new Date().getTime() });
-        setTask(defaultState);
+        //setTask(defaultState);
+        setTask({content, id: new Date().getTime() });
         console.log("Default State: ", defaultState)
 
         
@@ -30,8 +31,8 @@ function TaskForm(props) {
 
         const data = {
             wordList: [{
-            done: true,
-            description: content,
+                content: content,
+                id: new Date().getTime(),
             }]
         }
         
