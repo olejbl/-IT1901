@@ -26,11 +26,14 @@ class Components.TodoItems{
 ---
 Tasks()
 useEffects()
-handleAddTask(task)
+handleAddTask()
 handleDeleteTask()
  }
 
 class Components.TodoList{
+---
+Task()
+TaskList(props)
 }
 
 class Components.TaskForm{
