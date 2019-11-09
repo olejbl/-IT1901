@@ -35,6 +35,7 @@ public class ApiController {
         ObjectMapper objectMapper = new ObjectMapper();
         Listeklasse listeklasse = objectMapper.readValue(listeklasseJSON, Listeklasse.class);
         System.out.println("Converted listeklasse");
+        System.out.println("Dette er  listeklasse" + listeklasse.getWordList());
         service.saveListeklasse(listeklasse);
         return "saved";
     }

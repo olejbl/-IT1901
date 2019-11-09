@@ -15,7 +15,7 @@ function TaskForm(props) {
         const value = event.target.value;
         const name = event.target.name;
         setTask({ ...task, [name]: value});
-    };
+    };  
     let {content} = task;
 
     let submitTask = evt => {
@@ -23,9 +23,7 @@ function TaskForm(props) {
         addTask({content, id: new Date().getTime() });
         //setTask(defaultState);
         setTask({content, id: new Date().getTime() });
-        console.log("Default State: ", defaultState)
 
-        
         let headers = new Headers();
         headers.append('Origin','http://localhost:8080');
 

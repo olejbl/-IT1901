@@ -25,8 +25,13 @@ export default function Tasks() {
         return;
       }
       // set tasks here, importing from axios
-      setTasks(res.data.wordList);
+      //setTasks(res.data.wordList);
       console.log(res.data.wordList)
+      const arr = res.data.wordList;
+      let pp = arr.filter( (ele, ind) => ind === arr.findIndex( elem => elem.id === ele.id))
+      setTasks(pp);
+
+      console.log(pp)
     })
     .catch(function(err) {
       console.log('Fetch error: ' , err);

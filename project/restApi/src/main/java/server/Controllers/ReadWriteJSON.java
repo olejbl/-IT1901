@@ -18,6 +18,7 @@ public class ReadWriteJSON {
 
     public void writeTodos(Listeklasse listeklasse) throws IOException {
         System.out.println("In read write");
+        objectMapper.writeValue(path, "");
         objectMapper.writeValue(path, listeklasse);
     }
 
