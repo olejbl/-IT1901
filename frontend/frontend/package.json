@@ -31,5 +31,8 @@
       "last 1 safari version"
     ],
     "proxy": "http://localhost:8080"
+  },
+  "devDependencies": {
+    "jest": "^24.9.0"
   }
 }
