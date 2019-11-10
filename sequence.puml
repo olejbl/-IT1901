@@ -1,6 +1,10 @@
 @startuml
-User -> Client: "I would like to add a Task to my Todo List"
-Client -> Backend: addTask()
-Backend --> Client: Send updated TodoList
-Client --> User: gets data
+User -> TodoItems: "I would like to add a Task to my Todo List"
+TodoItems -> ApiController: addTask()
+ApiController -> service: retrieveList()
+service -> readWriteJSON: saveListeklasse()
+readWriteJSON --> service: 
+service --> ApiController: getAll()
+ApiController --> TodoItems: getWordList()
+TodoItems --> User: "New task added in todo List"
 @enduml

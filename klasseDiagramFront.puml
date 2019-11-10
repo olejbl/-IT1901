@@ -1,7 +1,7 @@
-@startuml
+@startuml class
 
 class App {
----
+
 App()
 
 }
@@ -38,13 +38,14 @@ TaskList(props)
 
 class Components.TaskForm{
 ---
-TaskForm(props)
+TaskForm()
 submitTask()
 handleFieldChange()
 
 }
 
 class Input.Input {
+---
 Input(props)
 }
 
