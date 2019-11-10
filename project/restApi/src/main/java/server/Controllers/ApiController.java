@@ -11,19 +11,27 @@ public class ApiController {
 
     public ApiController () {
         service = new Service();
+        
     }
     //Metoder for rest API//
 
     //Get metode for å hente fra server
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @GetMapping(value = "/all")
     public Listeklasse getWordList() throws IOException {
+        System.out.println("Returning list..");
+        System.out.println(service.getAll());
         return service.getAll();
     }
 
+
+
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @PostMapping(value="/save")
     public String retrieveList(@RequestBody String listeklasseJSON) throws IOException {
-        System.out.println("Request received");
+        System.out.println("Request received: ");
         System.out.println(listeklasseJSON);
+        System.out.println("Trying to save value " + listeklasseJSON);
         ObjectMapper objectMapper = new ObjectMapper();
         Listeklasse listeklasse = objectMapper.readValue(listeklasseJSON, Listeklasse.class);
         System.out.println("Converted listeklasse");
