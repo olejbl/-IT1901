@@ -70,6 +70,7 @@ export default function Tasks() {
       />
       <TaskForm addTask={handleAddTask} />
       <Button onClick= {console.log("Button:)")}>Load</Button>
+      <p data-testid="items">Tasks length:{tasks.length}</p>
     </div>
   )
 }
