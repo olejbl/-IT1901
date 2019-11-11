@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Button from './Button'
 import '../CSS/TodoList.css'
+import '../CSS/TodoItems.css'
 
 //Lager todolista
 function Task( {task, deleteTask}) {
@@ -28,7 +29,7 @@ export default function TaskList (props) {
     ));
 
     return (
-      <table >
+      <table className="table">
         <thead >
         <tr>
           <th>Task</th>

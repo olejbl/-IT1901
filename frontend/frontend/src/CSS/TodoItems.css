@@ -10,11 +10,13 @@ table tr {
 	border-bottom: 1px solid #009682;
 }
 
-table {
+.table {
 	width: auto;
 	margin: auto;
 	text-align: center;
+	display: inline-block;
 }
+
 
 .tasks {
 	margin-bottom: 4%;
