@@ -1,6 +1,14 @@
-
 README.MD
 ===
+# Gruppe 19 - IT-Prosjekt 1
+
+Denne innleveringen har som formål å forbedre 
+
+### Komme i gang
+1. `git clone` prosjektet, https://gitlab.stud.idi.ntnu.no/it1901/gr1919/gr1919.git
+2. cd gr1919
+3. cd project og kjør `npm install`  fra *.../project/frontend*
+4. kjør `gradle bootrun`  fra *.../project/backend*
 
 
 ## Om appen
@@ -90,6 +98,7 @@ Lagringsaget (persistenslaget) inneholder klasser for lagring av data. Det foreg
 Testing
 ---
 Du kan teste appen ved å kjøre `gradle check`, og få ut testdekningsgrad ved hjelp av `gradle jacocoTestReport`, da vil rapporten ligge i `build/reports/jacoco/src.src.test/html/index.html`.
+Vi har også brukt Jest for å teste. 
 
 Artkitektur
 ---
