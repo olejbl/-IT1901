@@ -66,7 +66,9 @@ for frontend:
 
 * `src/Input` for fil som behandler input i Todo-lista
 
-* `src/` for hovedfiler som App.js, sammen med tilhørende css for styling
+* `src/` for hovedfiler som App.js
+
+* `src/CSS` for alle css-filer. De har samme navn som tilhørende js-fil
 
 
 
