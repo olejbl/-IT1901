@@ -57,7 +57,21 @@ for restapi:
 * `src/main/java/restAPI/Controllers` for kontrollklasse
 * `src/main/java/restAPI` for applikasjonsklasse 
 
-###Frontend:
+### Frontend:
+
+for frontend:
+
+* `src/Components` for komponenter som gjennbrukes. Både .js-filer og css-filer. 
+* `src/Input` for fil som behandler input i Todo-lista
+* `src/` for hovedfiler som App.js, sammen med tilhørende css for styling
+
+
+
+Dokumentasjon 
+---
+I hver hovedmappe vil det ligge en readme.md-fil som beskriver inneholdet i denne mappen. Disse filene vil ikke være like detaljerte som denne, men gi en kort 
+beskrivelse. I mappen `diagrams/` ligger alle diagramfiler laget i **PlantUML** sammen med de tilsvarende png-filene.
+
 
 
 Domenelaget
