@@ -2,7 +2,7 @@ README.MD
 ===
 # Gruppe 19 - IT-Prosjekt 1
 
-Denne innleveringen har som formål å forbedre 
+Denne innleveringen har som formål å forbedre vår tidligere innlevering, samt å implementere React.js i frontend.
 
 ### Komme i gang
 1. `git clone` prosjektet, https://gitlab.stud.idi.ntnu.no/it1901/gr1919/gr1919.git
