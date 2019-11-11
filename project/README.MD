@@ -8,6 +8,7 @@ Denne innleveringen har som formål å forbedre vår tidligere innlevering, samt
 1. `git clone` prosjektet, https://gitlab.stud.idi.ntnu.no/it1901/gr1919/gr1919.git
 2. cd gr1919
 3. cd project og kjør `npm install`  fra *.../project/frontend*
+4. kjør `npm start`
 4. kjør `gradle bootrun`  fra *.../project/backend*
 
 
