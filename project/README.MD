@@ -55,6 +55,7 @@ For core:
 
 for restapi:
 * `src/main/java/restAPI/Controllers` for kontrollklasse
+
 * `src/main/java/restAPI` for applikasjonsklasse 
 
 ### Frontend:
@@ -62,7 +63,9 @@ for restapi:
 for frontend:
 
 * `src/Components` for komponenter som gjennbrukes. Både .js-filer og css-filer. 
+
 * `src/Input` for fil som behandler input i Todo-lista
+
 * `src/` for hovedfiler som App.js, sammen med tilhørende css for styling
 
 
@@ -101,10 +104,14 @@ Artkitektur
 
 Diagrammer
 ---
+#### Klassedigram for frontend:
 ![Klassediagram frontend](diagrams/klasseDiagramFront.png)
 
+#### Klassediagram for backend:
 ![Klassediagram backend](diagrams/klasseDiagramBack.png)
 
+#### Sekvensdiagram:
 ![Sekvensdiagram](diagrams/sequence.png)
 
+---
 ###### tags: `Readme` `Documentation` `IT1901`
