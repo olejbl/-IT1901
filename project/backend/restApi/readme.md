@@ -1,6 +1,3 @@
----
-title: 'project documentation'
----
 
 modul for REST-api
 ===

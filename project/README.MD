@@ -1,14 +1,6 @@
----
-title: 'Project documentation'
----
 
 README.MD
 ===
-
-
-## Table of Contents
-
-[TOC]
 
 
 ## Om appen
@@ -68,7 +60,7 @@ for frontend:
 
 * `src/` for hovedfiler som App.js
 
-* `src/CSS` for alle css-filer. De har samme navn som tilhørende js-fil
+* `src/CSS` for alle css-filer. De har samme navn
 
 
 

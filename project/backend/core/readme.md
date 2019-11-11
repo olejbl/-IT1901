@@ -1,6 +1,4 @@
----
-title: 'project documentation'
----
+
 
 Modul for kjernelogikk og lagring
 ===
