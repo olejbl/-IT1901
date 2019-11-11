@@ -23,6 +23,10 @@ component backend{
     todo.restserver ..> todo.core
 
     restserver ..> springboot
+
+    component jackson {
+    }
+    todo.restserver ..> jackson
 }
 
 component frontend {
@@ -32,6 +36,16 @@ component frontend {
 }
 
 src ..> restserver
+
+component axios {
+}
+
+src ..> axios
+
+component jest {
+}
+src ..> jest
+
 
 
 
