@@ -13,8 +13,8 @@ public class ListeklasseTest {
          listeklasse = new Listeklasse();
          Assert.assertNotNull(listeklasse);
          Assert.assertEquals(true, listeklasse.getWordList().isEmpty());
-         Todo todo = new Todo("test",true);
-         listeklasse.wordListAdd(todo);
+         Todo todo = new Todo("test",1);
+         listeklasse.getWordList().add(todo);
          Assert.assertEquals(todo, listeklasse.getWordList().get(0));
          listeklasse.wordListRemove(todo);
          Assert.assertEquals(true, listeklasse.getWordList().isEmpty());

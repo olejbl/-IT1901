@@ -1,0 +1,53 @@
+@startuml klasseDiagramBack
+
+
+class core.Listeklasse {
+    - String name
+    + void wordListAdd()
+    + void wordListRemove()
+    + public ArrayList<Todo> getWordList()
+    + public String getName()
+}
+
+
+class core.Todo {
+    - String desc
+    - boolean done
+    + void setDone()
+    + void setDescription()
+    + String getDescription()
+    + boolean getDone()
+}
+
+
+core.Listeklasse "1" --> "*" core.Todo
+
+
+class restApi.ApiController{
+- Service service
++ ApiController()
++ Listeklasse getWordList()
++ String RetrieveList()
+}
+
+class restApi.ProjectApplication{
+
++ void main()
+}
+
+class restApi.ReadWriteJSON{
+- ObjectMapper objectMapper
+- file path
++ ReadWriteJSON()
++ void writeTodos()
++ Listeklasse readListeklasse()
+}
+
+class restApi.Service{
+- ReadWriteJSON readwriteJSON
++ Service()
++Listeklasse getAll()
++ void saveListeklasse()
+}
+
+@enduml

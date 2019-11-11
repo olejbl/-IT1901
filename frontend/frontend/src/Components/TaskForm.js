@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types'; //for tilstandskontroll og bug-check
 import Input from '../Input/Input';
-import './TaskForm.css'
+import '../CSS/TaskForm.css'
 
 const defaultState = {
     content: '',
@@ -20,9 +20,15 @@ function TaskForm(props) {
 
     let submitTask = evt => {
         evt.preventDefault(); //for å slippe å reloade på submit
-        addTask({content, id: new Date().getTime() });
-        //setTask(defaultState);
         setTask({content, id: new Date().getTime() });
+        //sjekk om input er tom 
+        if(!handleValidation({content})){
+            alert("Input cannot be empty");
+            return; 
+        }
+        addTask({content, id: new Date().getTime() });
+       
+        
 
         let headers = new Headers();
         headers.append('Origin','http://localhost:8080');
@@ -51,6 +57,19 @@ function TaskForm(props) {
             .then(contents => console.log(JSON.stringify(contents), " is the contents from fetch response /save POST"))
             .catch(() => console.log("Can’t access " + url + " response. Blocked by browser?"))
     }
+
+    let handleValidation = task =>{
+        let errors = {};
+        let formIsValid = true; 
+
+        if (content === ''){
+            formIsValid = false; 
+            errors[content] = "Cannot be empty";
+        }
+        return formIsValid;
+    }
+
+  
     return (
         <form onSubmit={submitTask}>
             <Input
@@ -58,8 +77,7 @@ function TaskForm(props) {
                 type="text"
                 onChange={handleFieldChange}
                 label="Add task: "
-                value={content.toString()}
-            />
+                value={content.toString()} />  
             <Input className="btnSend" name="submit" type="submit" />
         </form>
     );

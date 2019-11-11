@@ -41,6 +41,7 @@ Feature: Lage TODO-liste
 ## Organisering av koden
 Dette prosjektet tar for seg bygging av en TODO-liste. Det er en trelagsapplikasjon med domenelag, UI og lagring. Gradle blir brukt som byggesystem.
 
+### Backend:
 For core:
 
 
@@ -52,25 +53,40 @@ For core:
 
 * `scr/test/resources` for tilhørende ressurser, f.eks. data-filer og FXML-filer, som brukes av testene.
 
-For fxui:
-
-* `src/main/java/todoui` for kontrollerklasse og applikasjonsklasse
-* `src/main/resources` for fxml-fil
-
 for restapi:
 * `src/main/java/restAPI/Controllers` for kontrollklasse
+
 * `src/main/java/restAPI` for applikasjonsklasse 
+
+### Frontend:
+
+for frontend:
+
+* `src/Components` for komponenter som gjennbrukes. Både .js-filer og css-filer. 
+
+* `src/Input` for fil som behandler input i Todo-lista
+
+* `src/` for hovedfiler som App.js, sammen med tilhørende css for styling
+
+
+
+Dokumentasjon 
+---
+I hver hovedmappe vil det ligge en readme.md-fil som beskriver inneholdet i denne mappen. Disse filene vil ikke være like detaljerte som denne, men gi en kort 
+beskrivelse. I mappen `diagrams/` ligger alle diagramfiler laget i **PlantUML** sammen med de tilsvarende png-filene.
+
+
 
 Domenelaget
 ---
 Vår applikasjon lagrer oppgaver i en liste (TODO-liste). Domenelaget inneholder klasser som håndterer disse oppgavene. 
 
-Brukergrensesnitt
+Brukergrensesnitt i React
 ---
 
 Brukergrensesnittlaget inneholder alle klassene som tar for seg user-interface, og hvordan de representes gjennom visningen av data i applikasjonen.
 
-Brukergrensesnittet er laget med JavaFX og FXML. Det finner man i `fxui/src/main/java/todoui` for kontroller og app-klassen. FXML-fila finnes i `fxui/src/resources`
+Brukergrensesnittet er laget med React Det finner man i `frontend/src` 
 
 Lagring
 ---
@@ -83,6 +99,19 @@ Du kan teste appen ved å kjøre `gradle check`, og få ut testdekningsgrad ved 
 
 Artkitektur
 ---
-![Arkitektur](diagram.png)
+![Arkitektur](diagrams/diagram.png)
 
+
+Diagrammer
+---
+#### Klassedigram for frontend:
+![Klassediagram frontend](diagrams/klasseDiagramFront.png)
+
+#### Klassediagram for backend:
+![Klassediagram backend](diagrams/klasseDiagramBack.png)
+
+#### Sekvensdiagram:
+![Sekvensdiagram](diagrams/sequence.png)
+
+---
 ###### tags: `Readme` `Documentation` `IT1901`

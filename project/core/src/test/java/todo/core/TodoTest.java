@@ -9,12 +9,12 @@ public class TodoTest {
 
     @Test
     public void initTest() {
-        todo = new Todo("Hei!",false);
-        Assert.assertEquals(todo.getDescription(), "Hei!");
-        Assert.assertEquals(todo.getDone(), false);
-        todo.setDone(true);
-        Assert.assertEquals(todo.getDone(),true);
-        todo.setDescription("Poop");
-        Assert.assertEquals(todo.getDescription(), "Poop");
+        todo = new Todo("Hei!",1);
+        Assert.assertEquals(todo.getContent(), "Hei!");
+        Assert.assertEquals(todo.getId(), 1,0);
+        todo.setContent("Poop");
+        Assert.assertEquals(todo.getContent(), "Poop");
+        todo.setId(2);
+        Assert.assertEquals(todo.getId(), 2,0);
     }
 }
