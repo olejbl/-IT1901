@@ -1,40 +1,38 @@
 @startuml
 
-
-component core{
-    package todo.core
-    package todo.json
-}
-
-component fxui{
-    package todo.ui
-}
-
-component javafx{
-    component fxml{
+component backend{
+    component restserver {
+        package todo.restserver
     }
+    component core{
+        package todo.core
+        package todo.json
+    }
+    component restApi{
+        package todo.restApi
+
+    }
+    todo.restApi ..> todo.core
+    todo.restApi ..> todo.json
+
+
+    component springboot {
+    }
+
+    todo.restserver ..> todo.restApi
+    todo.restserver ..> todo.core
+
+    restserver ..> springboot
 }
 
-fxui ..> javafx
-fxui ..> fxml
-
-component restApi{
-    package todo.restApi
+component frontend {
+    package src
+    package public
 
 }
-todo.restApi ..> todo.core
-todo.restApi ..> todo.json
 
-component restserver {
-    package todo.restserver
-}
-component springboot {
-}
+src ..> restserver
 
-todo.restserver ..> todo.restApi
-todo.restserver ..> todo.core
-
-restserver ..> springboot
 
 
 @enduml
