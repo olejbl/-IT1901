@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Button from './Button'
-import './TodoList.css'
+import '../CSS/TodoList.css'
 
 //Lager todolista
 function Task( {task, deleteTask}) {

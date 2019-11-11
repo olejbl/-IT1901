@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types'; //for tilstandskontroll og bug-check
 import Input from '../Input/Input';
-import './TaskForm.css'
+import '../CSS/TaskForm.css'
 
 const defaultState = {
     content: '',

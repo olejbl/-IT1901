@@ -24,8 +24,6 @@ public class ApiController {
         return service.getAll();
     }
 
-
-
     @CrossOrigin(origins = "*", allowedHeaders = "*")
     @PostMapping(value="/save")
     public String retrieveList(@RequestBody String listeklasseJSON) throws IOException {
@@ -39,63 +37,6 @@ public class ApiController {
         service.saveListeklasse(listeklasse);
         return "saved";
     }
-
-
-
-
-    //----------------Alt under er mer avansert kode som sjekker for ulike feilmeldinger, men vi fokuserer på det enkle først---------
-    /*
-    @PostMapping(value="/save/")
-    public ResponseEntity<?> createListeklasse(@RequestParam(value="desc") String desc, @RequestParam(value="done") boolean done) throws IOException {
-        Listeklasse listeklasse;
-        try{
-            listeklasse = new Listeklasse(liste);
-        } catch (IllegalArgumentException e){
-            throw new ResponseStatusException(
-                    HttpStatus.BAD_REQUEST,
-                    "invalid desc"
-            );
-        }//hvilken linje som gjør at vi kjører springboot
-
-        try{
-            new File("build/save").mkdir(); //Sjekker om hei er en fil;
-            File path = new File("build/save" + ".json");
-            new ObjectMapper().writeValue(path, listeklasse);
-            return (ResponseEntity<?>) ResponseEntity.created(new URI("save"));
-        } catch (JsonProcessingException e) {
-            e.printStackTrace();
-            throw new ResponseStatusException(
-                    HttpStatus.INTERNAL_SERVER_ERROR, "Could not serialize listeklasse."
-            );
-        } catch (IOException | URISyntaxException e) {
-            e.printStackTrace();
-            throw new ResponseStatusException(
-                    HttpStatus.INTERNAL_SERVER_ERROR, "Write error."
-            );
-        }
-
-    }
-    /*
-    @GetMapping(value = "/all")
-    public Listeklasse getWordList() {
-        File path = new File("build/save/" + id +  ".json");
-
-        try {
-            // This requires some changes to person constructors / jackson-stuff to actually work
-            return new ObjectMapper().readValue(path, Listeklasse.class);
-
-        } catch (FileNotFoundException e) {
-            throw new ResponseStatusException(
-                    HttpStatus.NOT_FOUND, "Listeklasse does not exist."
-            );
-        } catch (IOException e) {
-            e.printStackTrace();
-            throw new ResponseStatusException(
-                    HttpStatus.INTERNAL_SERVER_ERROR, "Could not parse JSON."
-            );
-        }
-    }
-    */
 
 //Slutt for rest API
 }

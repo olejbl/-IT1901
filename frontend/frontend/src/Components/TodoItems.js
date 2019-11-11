@@ -1,8 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import TaskForm from './TaskForm';
 import TaskList from './TodoList';
-//import reqListener from './Client'
-import Button from './Button';
 import axios from "axios";
 
 
@@ -40,9 +38,6 @@ export default function Tasks() {
   }, []);
 
 
-  
-
- // });
 
   let handleAddTask = task => {
     setTasks(tasks.concat(task));
@@ -53,14 +48,6 @@ export default function Tasks() {
     setTasks(tasks.filter((task) => task.id !== id));
   };
 
-  
-/*
-  async componentDidiMount = () => {
-    const respons = await fetch('./project/restApi/save.json');
-    const body = await response.json();
-    this.setState({content: content});
-  };
-  */
 
   return (
     <div className="tasks">
@@ -69,7 +56,6 @@ export default function Tasks() {
         tasks={tasks}
       />
       <TaskForm addTask={handleAddTask} />
-      <Button onClick= {console.log("Button:)")}>Load</Button>
       <p data-testid="items">Tasks length:{tasks.length}</p>
     </div>
   )
