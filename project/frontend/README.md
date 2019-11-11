@@ -16,11 +16,15 @@ Hvordan kjører man vår applikasjon? Følg oppskriften under
 
 ### `gradle bootrun`
 
-først starter man serveren ved å gå inn i /project og skrive kommandoen `gradle bootrun`
+først starter man serveren ved å gå inn i project/backend og skrive kommandoen `gradle bootrun`
 
 ### `npm start`
 
-for å starte selve applikasjonen går man inn i frontend/frontend og skriver inn kommandoen `npm start`
+for å starte selve applikasjonen går man inn i project/frontend og skriver inn kommandoen `npm start`
 Åpne http://localhost:3000 
+
+### 'npm test'
+
+For å teste react-testen, går man inn i project/frontend mappen og skriver `npm test`
 
 
