@@ -23,7 +23,7 @@ først starter man serveren ved å gå inn i project/backend og skrive kommandoe
 for å starte selve applikasjonen går man inn i project/frontend og skriver inn kommandoen `npm start`
 Åpne http://localhost:3000 
 
-### 'npm test'
+### `npm test`
 
 For å teste react-testen, går man inn i project/frontend mappen og skriver `npm test`
 
